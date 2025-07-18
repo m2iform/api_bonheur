@@ -1,326 +1,859 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Accueil | Apiculteur Passionné</title>
-  <meta name="description" content="Découvrez le monde de l'apiculture, nos miels, notre savoir-faire et l'histoire de notre apiculteur passionné. Vente directe, conseils, actualités et contact." />
-  <link href="dist/output.css" rel="stylesheet">
-  <script defer src="dist/main.js"></script>
-</head>
-<body class="bg-white text-gray-800 min-h-screen flex flex-col font-sans">
-  <!-- Header & Navigation -->
-  <header class="bg-white/95 shadow-sm sticky top-0 z-50 border-b border-yellow-100">
-    <nav class="container mx-auto flex items-center justify-between py-3 px-4 md:px-6" aria-label="Navigation principale">
-      <a href="index.html" class="flex items-center gap-2">
-        <span class="block h-10 w-10 animate-bee-float">
-          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10">
-            <!-- Corps de l'abeille -->
-            <ellipse cx="32" cy="38" rx="14" ry="18" fill="#FDE68A" stroke="#F59E42" stroke-width="2"/>
-            <!-- Rayures -->
-            <rect x="24" y="28" width="16" height="4" rx="2" fill="#F59E42"/>
-            <rect x="24" y="36" width="16" height="4" rx="2" fill="#F59E42"/>
-            <rect x="24" y="44" width="16" height="4" rx="2" fill="#F59E42"/>
-            <!-- Tête -->
-            <circle cx="32" cy="22" r="8" fill="#FDE68A" stroke="#F59E42" stroke-width="2"/>
-            <!-- Ailes animées -->
-            <g>
-              <ellipse id="wingL" cx="20" cy="18" rx="8" ry="16" fill="#fff" fill-opacity=".7">
-                <animateTransform attributeName="transform" type="rotate" values="0 20 18;15 20 18;0 20 18" dur="1s" repeatCount="indefinite"/>
-              </ellipse>
-              <ellipse id="wingR" cx="44" cy="18" rx="8" ry="16" fill="#fff" fill-opacity=".7">
-                <animateTransform attributeName="transform" type="rotate" values="0 44 18;-15 44 18;0 44 18" dur="1s" repeatCount="indefinite"/>
-              </ellipse>
-            </g>
-            <!-- Antennes -->
-            <path d="M28 14 Q26 10 22 12" stroke="#F59E42" stroke-width="2" fill="none"/>
-            <path d="M36 14 Q38 10 42 12" stroke="#F59E42" stroke-width="2" fill="none"/>
-            <!-- Yeux -->
-            <circle cx="29" cy="22" r="1.2" fill="#222"/>
-            <circle cx="35" cy="22" r="1.2" fill="#222"/>
-            <!-- Ombre -->
-            <ellipse cx="32" cy="60" rx="10" ry="2.5" fill="#F59E42" fill-opacity=".2"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accueil | Apiculteur Passionné</title>
+    <meta
+      name="description"
+      content="Découvrez le monde de l'apiculture, nos miels, notre savoir-faire et l'histoire de notre apiculteur passionné. Vente directe, conseils, actualités et contact."
+    />
+    <link href="dist/output.css" rel="stylesheet" />
+    <script defer src="dist/main.js"></script>
+  </head>
+  <body class="bg-white text-gray-800 min-h-screen flex flex-col font-sans">
+    <!-- Header & Navigation -->
+    <header
+      class="bg-white/95 shadow-sm sticky top-0 z-50 border-b border-yellow-100"
+    >
+      <nav
+        class="container mx-auto flex items-center justify-between py-3 px-4 md:px-6"
+        aria-label="Navigation principale"
+      >
+        <a href="index.html" class="flex items-center gap-2">
+          <span class="block h-10 w-10 animate-bee-float">
+            <svg
+              viewBox="0 0 64 64"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-10 w-10"
+            >
+              <!-- Corps de l'abeille -->
+              <ellipse
+                cx="32"
+                cy="38"
+                rx="14"
+                ry="18"
+                fill="#FDE68A"
+                stroke="#F59E42"
+                stroke-width="2"
+              />
+              <!-- Rayures -->
+              <rect x="24" y="28" width="16" height="4" rx="2" fill="#F59E42" />
+              <rect x="24" y="36" width="16" height="4" rx="2" fill="#F59E42" />
+              <rect x="24" y="44" width="16" height="4" rx="2" fill="#F59E42" />
+              <!-- Tête -->
+              <circle
+                cx="32"
+                cy="22"
+                r="8"
+                fill="#FDE68A"
+                stroke="#F59E42"
+                stroke-width="2"
+              />
+              <!-- Ailes animées -->
+              <g>
+                <ellipse
+                  id="wingL"
+                  cx="20"
+                  cy="18"
+                  rx="8"
+                  ry="16"
+                  fill="#fff"
+                  fill-opacity=".7"
+                >
+                  <animateTransform
+                    attributeName="transform"
+                    type="rotate"
+                    values="0 20 18;15 20 18;0 20 18"
+                    dur="1s"
+                    repeatCount="indefinite"
+                  />
+                </ellipse>
+                <ellipse
+                  id="wingR"
+                  cx="44"
+                  cy="18"
+                  rx="8"
+                  ry="16"
+                  fill="#fff"
+                  fill-opacity=".7"
+                >
+                  <animateTransform
+                    attributeName="transform"
+                    type="rotate"
+                    values="0 44 18;-15 44 18;0 44 18"
+                    dur="1s"
+                    repeatCount="indefinite"
+                  />
+                </ellipse>
+              </g>
+              <!-- Antennes -->
+              <path
+                d="M28 14 Q26 10 22 12"
+                stroke="#F59E42"
+                stroke-width="2"
+                fill="none"
+              />
+              <path
+                d="M36 14 Q38 10 42 12"
+                stroke="#F59E42"
+                stroke-width="2"
+                fill="none"
+              />
+              <!-- Yeux -->
+              <circle cx="29" cy="22" r="1.2" fill="#222" />
+              <circle cx="35" cy="22" r="1.2" fill="#222" />
+              <!-- Ombre -->
+              <ellipse
+                cx="32"
+                cy="60"
+                rx="10"
+                ry="2.5"
+                fill="#F59E42"
+                fill-opacity=".2"
+              />
+            </svg>
+          </span>
+          <span class="font-bold text-xl text-yellow-700"
+            >Apiculteur Passionné</span
+          >
+        </a>
+        <!-- Menu desktop -->
+        <ul class="hidden md:flex gap-6 text-lg">
+          <li>
+            <a
+              href="index.html"
+              class="nav-link text-yellow-700 font-semibold border-b-2 border-yellow-400"
+              >Accueil</a
+            >
+          </li>
+          <li><a href="produits.html" class="nav-link">Produits</a></li>
+          <li><a href="apiculteur.html" class="nav-link">L'Apiculteur</a></li>
+          <li><a href="savoir-faire.html" class="nav-link">Savoir-faire</a></li>
+          <li><a href="actualites.html" class="nav-link">Actualités</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <!-- Burger button mobile -->
+        <button
+          id="burgerBtn"
+          class="md:hidden flex flex-col gap-1 p-2 rounded hover:bg-yellow-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 transition-all duration-300 cursor-pointer"
+          aria-label="Ouvrir le menu"
+        >
+          <span
+            class="block w-6 h-0.5 bg-yellow-700 transition-all duration-300"
+            id="burgerLine1"
+          ></span>
+          <span
+            class="block w-6 h-0.5 bg-yellow-700 transition-all duration-300"
+            id="burgerLine2"
+          ></span>
+          <span
+            class="block w-6 h-0.5 bg-yellow-700 transition-all duration-300"
+            id="burgerLine3"
+          ></span>
+        </button>
+      </nav>
+      <!-- Menu mobile -->
+      <div
+        id="mobileOverlay"
+        class="fixed inset-0 bg-black/30 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out md:hidden cursor-pointer"
+      ></div>
+      <nav
+        id="mobileMenu"
+        class="md:hidden fixed top-0 right-0 h-full w-4/5 max-w-xs bg-white/95 rounded-l-3xl shadow-2xl z-50 flex flex-col items-center justify-center gap-8 text-xl font-semibold text-yellow-700 transition-all duration-300 ease-in-out opacity-0 translate-x-full focus:outline-none animate-none"
+        aria-label="Menu mobile"
+      >
+        <div class="flex flex-col items-center gap-2 mt-8 mb-4 select-none">
+          <span class="block h-10 w-10 animate-bee-float">
+            <svg
+              viewBox="0 0 64 64"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-10 w-10"
+            >
+              <ellipse
+                cx="32"
+                cy="38"
+                rx="14"
+                ry="18"
+                fill="#FDE68A"
+                stroke="#F59E42"
+                stroke-width="2"
+              />
+              <rect x="24" y="28" width="16" height="4" rx="2" fill="#F59E42" />
+              <rect x="24" y="36" width="16" height="4" rx="2" fill="#F59E42" />
+              <rect x="24" y="44" width="16" height="4" rx="2" fill="#F59E42" />
+              <circle
+                cx="32"
+                cy="22"
+                r="8"
+                fill="#FDE68A"
+                stroke="#F59E42"
+                stroke-width="2"
+              />
+              <g>
+                <ellipse
+                  id="wingL"
+                  cx="20"
+                  cy="18"
+                  rx="8"
+                  ry="16"
+                  fill="#fff"
+                  fill-opacity=".7"
+                >
+                  <animateTransform
+                    attributeName="transform"
+                    type="rotate"
+                    values="0 20 18;15 20 18;0 20 18"
+                    dur="1s"
+                    repeatCount="indefinite"
+                  />
+                </ellipse>
+                <ellipse
+                  id="wingR"
+                  cx="44"
+                  cy="18"
+                  rx="8"
+                  ry="16"
+                  fill="#fff"
+                  fill-opacity=".7"
+                >
+                  <animateTransform
+                    attributeName="transform"
+                    type="rotate"
+                    values="0 44 18;-15 44 18;0 44 18"
+                    dur="1s"
+                    repeatCount="indefinite"
+                  />
+                </ellipse>
+              </g>
+              <path
+                d="M28 14 Q26 10 22 12"
+                stroke="#F59E42"
+                stroke-width="2"
+                fill="none"
+              />
+              <path
+                d="M36 14 Q38 10 42 12"
+                stroke="#F59E42"
+                stroke-width="2"
+                fill="none"
+              />
+              <circle cx="29" cy="22" r="1.2" fill="#222" />
+              <circle cx="35" cy="22" r="1.2" fill="#222" />
+              <ellipse
+                cx="32"
+                cy="60"
+                rx="10"
+                ry="2.5"
+                fill="#F59E42"
+                fill-opacity=".2"
+              />
+            </svg>
+          </span>
+          <span class="font-bold text-lg text-yellow-700">Menu</span>
+        </div>
+        <button
+          id="closeMenu"
+          class="absolute top-6 right-6 p-2 rounded hover:bg-yellow-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 cursor-pointer"
+          aria-label="Fermer le menu"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
           </svg>
-        </span>
-        <span class="font-bold text-xl text-yellow-700">Apiculteur Passionné</span>
-      </a>
-      <!-- Menu desktop -->
-      <ul class="hidden md:flex gap-6 text-lg">
-        <li><a href="index.html" class="nav-link text-yellow-700 font-semibold border-b-2 border-yellow-400">Accueil</a></li>
-        <li><a href="produits.html" class="nav-link">Produits</a></li>
-        <li><a href="apiculteur.html" class="nav-link">L'Apiculteur</a></li>
-        <li><a href="savoir-faire.html" class="nav-link">Savoir-faire</a></li>
-        <li><a href="actualites.html" class="nav-link">Actualités</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
-      </ul>
-      <!-- Burger button mobile -->
-      <button id="burgerBtn" class="md:hidden flex flex-col gap-1 p-2 rounded hover:bg-yellow-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 transition-all duration-300 cursor-pointer" aria-label="Ouvrir le menu">
-        <span class="block w-6 h-0.5 bg-yellow-700 transition-all duration-300" id="burgerLine1"></span>
-        <span class="block w-6 h-0.5 bg-yellow-700 transition-all duration-300" id="burgerLine2"></span>
-        <span class="block w-6 h-0.5 bg-yellow-700 transition-all duration-300" id="burgerLine3"></span>
-      </button>
-    </nav>
-    <!-- Menu mobile -->
-    <div id="mobileOverlay" class="fixed inset-0 bg-black/30 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-[1200ms] ease-in-out md:hidden cursor-pointer"></div>
-    <nav id="mobileMenu" class="md:hidden fixed top-0 right-0 h-full w-4/5 max-w-xs bg-white/95 rounded-l-3xl shadow-2xl z-50 flex flex-col items-center justify-center gap-8 text-xl font-semibold text-yellow-700 transition-all duration-[1400ms] ease-in-out opacity-0 translate-x-full focus:outline-none animate-none" aria-label="Menu mobile">
-      <div class="flex flex-col items-center gap-2 mt-8 mb-4 select-none">
-        <span class="block h-10 w-10 animate-bee-float">
-          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10">
-            <ellipse cx="32" cy="38" rx="14" ry="18" fill="#FDE68A" stroke="#F59E42" stroke-width="2"/>
-            <rect x="24" y="28" width="16" height="4" rx="2" fill="#F59E42"/>
-            <rect x="24" y="36" width="16" height="4" rx="2" fill="#F59E42"/>
-            <rect x="24" y="44" width="16" height="4" rx="2" fill="#F59E42"/>
-            <circle cx="32" cy="22" r="8" fill="#FDE68A" stroke="#F59E42" stroke-width="2"/>
-            <g>
-              <ellipse id="wingL" cx="20" cy="18" rx="8" ry="16" fill="#fff" fill-opacity=".7">
-                <animateTransform attributeName="transform" type="rotate" values="0 20 18;15 20 18;0 20 18" dur="1s" repeatCount="indefinite"/>
-              </ellipse>
-              <ellipse id="wingR" cx="44" cy="18" rx="8" ry="16" fill="#fff" fill-opacity=".7">
-                <animateTransform attributeName="transform" type="rotate" values="0 44 18;-15 44 18;0 44 18" dur="1s" repeatCount="indefinite"/>
-              </ellipse>
-            </g>
-            <path d="M28 14 Q26 10 22 12" stroke="#F59E42" stroke-width="2" fill="none"/>
-            <path d="M36 14 Q38 10 42 12" stroke="#F59E42" stroke-width="2" fill="none"/>
-            <circle cx="29" cy="22" r="1.2" fill="#222"/>
-            <circle cx="35" cy="22" r="1.2" fill="#222"/>
-            <ellipse cx="32" cy="60" rx="10" ry="2.5" fill="#F59E42" fill-opacity=".2"/>
-          </svg>
-        </span>
-        <span class="font-bold text-lg text-yellow-700">Menu</span>
-      </div>
-      <button id="closeMenu" class="absolute top-6 right-6 p-2 rounded hover:bg-yellow-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 cursor-pointer" aria-label="Fermer le menu">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
-      </button>
-      <a href="index.html" class="nav-link mobile-link focus-visible:ring-2 focus-visible:ring-yellow-400 active:scale-95 transition-transform cursor-pointer" aria-label="Accueil">Accueil</a>
-      <a href="produits.html" class="nav-link mobile-link focus-visible:ring-2 focus-visible:ring-yellow-400 active:scale-95 transition-transform cursor-pointer" aria-label="Produits">Produits</a>
-      <a href="apiculteur.html" class="nav-link mobile-link focus-visible:ring-2 focus-visible:ring-yellow-400 active:scale-95 transition-transform cursor-pointer" aria-label="L'Apiculteur">L'Apiculteur</a>
-      <a href="savoir-faire.html" class="nav-link mobile-link focus-visible:ring-2 focus-visible:ring-yellow-400 active:scale-95 transition-transform cursor-pointer" aria-label="Savoir-faire">Savoir-faire</a>
-      <a href="actualites.html" class="nav-link mobile-link focus-visible:ring-2 focus-visible:ring-yellow-400 active:scale-95 transition-transform cursor-pointer" aria-label="Actualités">Actualités</a>
-      <a href="contact.html" class="nav-link mobile-link focus-visible:ring-2 focus-visible:ring-yellow-400 active:scale-95 transition-transform cursor-pointer" aria-label="Contact">Contact</a>
-    </nav>
-  </header>
-  <!-- Breadcrumb -->
-  <div class="container mx-auto px-6 py-2 text-sm text-gray-500">
-    <nav aria-label="breadcrumb">
-      <ol class="list-reset flex">
-        <li><a href="index.html" class="hover:underline">Accueil</a></li>
-      </ol>
-    </nav>
-  </div>
-  <!-- Hero avec slider d'images et slogan -->
-  <section class="relative bg-green-50 py-10 overflow-hidden fade-section">
-    <div class="absolute inset-0 pointer-events-none">
-      <svg class="absolute top-0 right-0 opacity-20 w-80 h-80" viewBox="0 0 200 200" fill="none"><circle cx="100" cy="100" r="100" fill="#FDE68A"/></svg>
-      <svg class="absolute bottom-0 left-0 opacity-10 w-96 h-96" viewBox="0 0 200 200" fill="none"><circle cx="100" cy="100" r="100" fill="#F59E42"/></svg>
+        </button>
+        <a
+          href="index.html"
+          class="nav-link mobile-link focus-visible:ring-2 focus-visible:ring-yellow-400 active:scale-95 transition-transform cursor-pointer"
+          aria-label="Accueil"
+          >Accueil</a
+        >
+        <a
+          href="produits.html"
+          class="nav-link mobile-link focus-visible:ring-2 focus-visible:ring-yellow-400 active:scale-95 transition-transform cursor-pointer"
+          aria-label="Produits"
+          >Produits</a
+        >
+        <a
+          href="apiculteur.html"
+          class="nav-link mobile-link focus-visible:ring-2 focus-visible:ring-yellow-400 active:scale-95 transition-transform cursor-pointer"
+          aria-label="L'Apiculteur"
+          >L'Apiculteur</a
+        >
+        <a
+          href="savoir-faire.html"
+          class="nav-link mobile-link focus-visible:ring-2 focus-visible:ring-yellow-400 active:scale-95 transition-transform cursor-pointer"
+          aria-label="Savoir-faire"
+          >Savoir-faire</a
+        >
+        <a
+          href="actualites.html"
+          class="nav-link mobile-link focus-visible:ring-2 focus-visible:ring-yellow-400 active:scale-95 transition-transform cursor-pointer"
+          aria-label="Actualités"
+          >Actualités</a
+        >
+        <a
+          href="contact.html"
+          class="nav-link mobile-link focus-visible:ring-2 focus-visible:ring-yellow-400 active:scale-95 transition-transform cursor-pointer"
+          aria-label="Contact"
+          >Contact</a
+        >
+      </nav>
+    </header>
+    <!-- Breadcrumb -->
+    <div class="container mx-auto px-6 py-2 text-sm text-gray-500">
+      <nav aria-label="breadcrumb">
+        <ol class="list-reset flex">
+          <li><a href="index.html" class="hover:underline">Accueil</a></li>
+        </ol>
+      </nav>
     </div>
-    <div class="container mx-auto flex flex-col md:flex-row items-center gap-8 px-6 relative z-10">
-      <div class="flex-1">
-        <h1 class="text-4xl md:text-5xl font-extrabold text-yellow-700 mb-4 drop-shadow-lg">Le miel, notre passion<br><span class="text-yellow-500">du rucher à votre table</span></h1>
-        <p class="text-lg mb-6 text-yellow-900">Découvrez des produits authentiques, issus d'une apiculture respectueuse des abeilles et de la nature.</p>
-        <a href="produits.html" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded shadow-lg transition-transform transform hover:scale-105">Voir nos miels</a>
+    <!-- Hero avec slider d'images et slogan -->
+    <section class="relative bg-green-50 py-10 overflow-hidden fade-section">
+      <div class="absolute inset-0 pointer-events-none">
+        <svg
+          class="absolute top-0 right-0 opacity-20 w-80 h-80"
+          viewBox="0 0 200 200"
+          fill="none"
+        >
+          <circle cx="100" cy="100" r="100" fill="#FDE68A" />
+        </svg>
+        <svg
+          class="absolute bottom-0 left-0 opacity-10 w-96 h-96"
+          viewBox="0 0 200 200"
+          fill="none"
+        >
+          <circle cx="100" cy="100" r="100" fill="#F59E42" />
+        </svg>
       </div>
-      <div class="flex-1">
-        <div class="relative w-full h-64 md:h-80 rounded-lg overflow-hidden shadow-2xl group">
-          <div class="slider h-full w-full">
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80" alt="Abeille sur fleur" class="slider-img absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-700 group-hover:scale-105 group-hover:brightness-90" loading="lazy">
-            <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=800&q=80" alt="Apiculteur inspectant une ruche" class="slider-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700 group-hover:scale-105 group-hover:brightness-90" loading="lazy">
-            <img src="https://images.unsplash.com/photo-1502741126161-b048400d98b4?auto=format&fit=crop&w=800&q=80" alt="Rayon de miel" class="slider-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700 group-hover:scale-105 group-hover:brightness-90" loading="lazy">
-          </div>
-          <button class="slider-prev absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 shadow hover:bg-yellow-200 transition"><span class="sr-only">Précédent</span>&lt;</button>
-          <button class="slider-next absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 shadow hover:bg-yellow-200 transition"><span class="sr-only">Suivant</span>&gt;</button>
+      <div
+        class="container mx-auto flex flex-col md:flex-row items-center gap-8 px-6 relative z-10"
+      >
+        <div class="flex-1">
+          <h1
+            class="text-4xl md:text-5xl font-extrabold text-yellow-700 mb-4 drop-shadow-lg"
+          >
+            Le miel, notre passion<br /><span class="text-yellow-500"
+              >du rucher à votre table</span
+            >
+          </h1>
+          <p class="text-lg mb-6 text-yellow-900">
+            Découvrez des produits authentiques, issus d'une apiculture
+            respectueuse des abeilles et de la nature.
+          </p>
+          <a
+            href="produits.html"
+            class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded shadow-lg transition-transform transform hover:scale-105"
+            >Voir nos miels</a
+          >
         </div>
-      </div>
-    </div>
-  </section>
-  <!-- Présentation rapide de l'apiculteur -->
-  <section class="container mx-auto px-6 py-12 flex flex-col md:flex-row items-center gap-8 fade-section">
-    <div class="flex justify-center w-full md:w-auto">
-      <img src="assets/apiculteur.jpg" alt="Portrait Apiculteur" class="w-40 h-40 rounded-full border-4 border-yellow-400 shadow-lg object-cover mx-auto" loading="lazy">
-    </div>
-    <div>
-      <h2 class="text-2xl font-bold text-yellow-700 mb-2 flex items-center gap-2">Jean Dupont, apiculteur passionné <span class="inline-block bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full ml-2">Bio</span></h2>
-      <p class="text-gray-700 mb-2">Installé en Provence depuis 20 ans, Jean perpétue la tradition familiale avec amour et respect des abeilles. Certifié Bio, il partage son savoir-faire et propose des produits d'exception.</p>
-      <a href="apiculteur.html" class="text-yellow-600 hover:underline font-semibold">En savoir plus</a>
-    </div>
-  </section>
-  <!-- Sélection de produits phares -->
-  <section class="bg-white py-12 fade-section">
-    <div class="container mx-auto px-2 md:px-6">
-      <h2 class="text-2xl font-bold text-yellow-700 mb-6 flex items-center gap-2">Nos produits phares <span class="inline-block bg-yellow-200 text-yellow-800 text-xs px-2 py-1 rounded-full">Nouveautés</span></h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-        <div class="bg-yellow-50 rounded-2xl md:rounded-xl p-0 shadow-md md:shadow-lg relative group transition flex flex-col overflow-hidden border border-yellow-100 mx-1 md:mx-0 hover:scale-105 hover:shadow-2xl duration-300">
-          <span class="absolute top-3 right-3 bg-green-500 text-white text-xs px-2 py-1 rounded-full shadow z-10">Bio</span>
-          <div class="w-full h-48 md:h-56 bg-yellow-100 flex items-center justify-center rounded-t-2xl md:rounded-t-xl overflow-hidden">
-            <img src="assets/miel-acacia.jpg" alt="Miel d'acacia" class="w-full h-full object-cover rounded-t-2xl md:rounded-t-xl" loading="lazy">
+        <div class="flex-1">
+          <div
+            class="relative w-full h-64 md:h-80 rounded-lg overflow-hidden shadow-2xl group"
+          >
+            <div class="slider h-full w-full">
+              <img
+                src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80"
+                alt="Abeille sur fleur"
+                class="slider-img absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-700 group-hover:scale-105 group-hover:brightness-90"
+                loading="lazy"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=800&q=80"
+                alt="Apiculteur inspectant une ruche"
+                class="slider-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700 group-hover:scale-105 group-hover:brightness-90"
+                loading="lazy"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1502741126161-b048400d98b4?auto=format&fit=crop&w=800&q=80"
+                alt="Rayon de miel"
+                class="slider-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700 group-hover:scale-105 group-hover:brightness-90"
+                loading="lazy"
+              />
+            </div>
+            <button
+              class="slider-prev absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 shadow hover:bg-yellow-200 transition"
+            >
+              <span class="sr-only">Précédent</span>&lt;
+            </button>
+            <button
+              class="slider-next absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 shadow hover:bg-yellow-200 transition"
+            >
+              <span class="sr-only">Suivant</span>&gt;
+            </button>
           </div>
-          <div class="p-4 md:p-5 flex-1 flex flex-col justify-between items-center text-center">
-            <h3 class="font-bold text-lg mb-1 text-yellow-900">Miel d'acacia</h3>
-            <p class="text-yellow-800 font-semibold mb-2">8,50 €</p>
-            <a href="produits.html#acacia" class="text-yellow-600 hover:underline mt-auto">Voir le produit</a>
-          </div>
-        </div>
-        <div class="bg-yellow-50 rounded-2xl md:rounded-xl p-0 shadow-md md:shadow-lg relative group transition flex flex-col overflow-hidden border border-yellow-100 mx-1 md:mx-0 hover:scale-105 hover:shadow-2xl duration-300">
-          <span class="absolute top-3 right-3 bg-yellow-500 text-white text-xs px-2 py-1 rounded-full shadow z-10">Nouveauté</span>
-          <div class="w-full h-48 md:h-56 bg-yellow-100 flex items-center justify-center rounded-t-2xl md:rounded-t-xl overflow-hidden">
-            <img src="assets/miel-lavande.jpg" alt="Miel de lavande" class="w-full h-full object-cover rounded-t-2xl md:rounded-t-xl" loading="lazy">
-          </div>
-          <div class="p-4 md:p-5 flex-1 flex flex-col justify-between items-center text-center">
-            <h3 class="font-bold text-lg mb-1 text-yellow-900">Miel de lavande</h3>
-            <p class="text-yellow-800 font-semibold mb-2">9,00 €</p>
-            <a href="produits.html#lavande" class="text-yellow-600 hover:underline mt-auto">Voir le produit</a>
-          </div>
-        </div>
-        <div class="bg-yellow-50 rounded-2xl md:rounded-xl p-0 shadow-md md:shadow-lg relative group transition flex flex-col overflow-hidden border border-yellow-100 mx-1 md:mx-0 hover:scale-105 hover:shadow-2xl duration-300">
-          <div class="w-full h-48 md:h-56 bg-yellow-100 flex items-center justify-center rounded-t-2xl md:rounded-t-xl overflow-hidden">
-            <img src="assets/pollen.jpg" alt="Pollen" class="w-full h-full object-cover rounded-t-2xl md:rounded-t-xl" loading="lazy">
-          </div>
-          <div class="p-4 md:p-5 flex-1 flex flex-col justify-between items-center text-center">
-            <h3 class="font-bold text-lg mb-1 text-yellow-900">Pollen</h3>
-            <p class="text-yellow-800 font-semibold mb-2">6,00 €</p>
-            <a href="produits.html#pollen" class="text-yellow-600 hover:underline mt-auto">Voir le produit</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Témoignages clients -->
-  <section class="container mx-auto px-6 py-12 fade-section">
-    <h2 class="text-2xl font-bold text-yellow-700 mb-6 flex items-center gap-2">Ils nous font confiance <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg></h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="bg-white rounded-lg p-6 shadow flex flex-col items-center group hover:shadow-xl transition">
-        <img src="assets/client1.jpg" alt="Photo client Marie L." class="w-16 h-16 rounded-full object-cover mb-2 border-2 border-yellow-100 shadow" loading="lazy">
-        <div class="flex items-center mb-2">
-          <span class="text-yellow-400 text-xl">★★★★★</span>
-        </div>
-        <p class="text-gray-700 mb-2 italic">"Un miel exceptionnel, livraison rapide et soignée !"</p>
-        <span class="text-sm text-gray-500">- Marie L.</span>
-      </div>
-      <div class="bg-white rounded-lg p-6 shadow flex flex-col items-center group hover:shadow-xl transition">
-        <img src="assets/client2.jpg" alt="Photo client Paul G." class="w-16 h-16 rounded-full object-cover mb-2 border-2 border-yellow-100 shadow" loading="lazy">
-        <div class="flex items-center mb-2">
-          <span class="text-yellow-400 text-xl">★★★★★</span>
-        </div>
-        <p class="text-gray-700 mb-2 italic">"On sent la passion et la qualité dans chaque pot."</p>
-        <span class="text-sm text-gray-500">- Paul G.</span>
-      </div>
-      <div class="bg-white rounded-lg p-6 shadow flex flex-col items-center group hover:shadow-xl transition">
-        <img src="assets/client3.jpg" alt="Photo client Sophie R." class="w-16 h-16 rounded-full object-cover mb-2 border-2 border-yellow-100 shadow" loading="lazy">
-        <div class="flex items-center mb-2">
-          <span class="text-yellow-400 text-xl">★★★★★</span>
-        </div>
-        <p class="text-gray-700 mb-2 italic">"Des produits variés et un accueil chaleureux à la ferme."</p>
-        <span class="text-sm text-gray-500">- Sophie R.</span>
-      </div>
-    </div>
-  </section>
-  <!-- Actualités récentes -->
-  <section class="bg-gradient-to-br from-yellow-100 via-yellow-50 to-white py-12 fade-section">
-    <div class="container mx-auto px-6">
-      <h2 class="text-2xl font-bold text-yellow-700 mb-6 flex items-center gap-2">Actualités de la ruche <svg class="w-6 h-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M13 7H7v6h6V7z"/><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-6-8a6 6 0 1112 0A6 6 0 014 10z" clip-rule="evenodd"/></svg></h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white rounded-lg p-6 shadow group transition hover:scale-105 hover:shadow-2xl flex flex-col items-center hover:z-10 duration-300">
-          <div class="w-full h-80 bg-yellow-50 flex items-center justify-center mb-4 rounded-t-lg overflow-hidden">
-            <img src="assets/recolte-miel.jpg" alt="Récolte de printemps" class="w-full h-full object-cover rounded-t-lg" loading="lazy">
-          </div>
-          <h3 class="font-bold text-lg mb-2">Récolte de printemps réussie !</h3>
-          <p class="text-gray-700 mb-2">Nos abeilles ont produit un miel d'acacia exceptionnel cette année. Merci à tous pour votre soutien !</p>
-          <a href="actualites.html#recolte-printemps" class="text-yellow-600 hover:underline">Lire la suite</a>
-        </div>
-        <div class="bg-white rounded-lg p-6 shadow group transition hover:scale-105 hover:shadow-2xl flex flex-col items-center hover:z-10 duration-300">
-          <div class="w-full h-80 bg-yellow-50 flex items-center justify-center mb-4 rounded-t-lg overflow-hidden">
-            <img src="assets/marche-fermier.jpg" alt="Marché fermier apicole" class="w-full h-full object-cover rounded-t-lg" loading="lazy">
-          </div>
-          <h3 class="font-bold text-lg mb-2">Marché fermier ce dimanche</h3>
-          <p class="text-gray-700 mb-2">Retrouvez-nous au marché de la ville pour découvrir nos nouveautés et déguster nos produits.</p>
-          <a href="actualites.html#marche-dimanche" class="text-yellow-600 hover:underline">Lire la suite</a>
-        </div>
-        <div class="bg-white rounded-lg p-6 shadow group transition hover:scale-105 hover:shadow-2xl flex flex-col items-center hover:z-10 duration-300">
-          <div class="w-full h-80 bg-yellow-50 flex items-center justify-center mb-4 rounded-t-lg overflow-hidden">
-            <img src="assets/entretien-abeilles.jpg" alt="Conseils pour protéger les abeilles" class="w-full h-full object-cover rounded-t-lg" loading="lazy">
-          </div>
-          <h3 class="font-bold text-lg mb-2">Conseils pour protéger les abeilles</h3>
-          <p class="text-gray-700 mb-2">Découvrez nos astuces pour favoriser la biodiversité et aider les pollinisateurs dans votre jardin.</p>
-          <a href="actualites.html#proteger-abeilles" class="text-yellow-600 hover:underline">Lire la suite</a>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- Bouton retour en haut -->
-  <button id="backToTop" class="fixed bottom-6 right-6 bg-gradient-to-tr from-yellow-400 to-yellow-600 text-white p-3 rounded-full shadow-xl hover:scale-110 hover:shadow-2xl transition-all duration-300 ease-out ring-2 ring-yellow-200/60 focus:outline-none focus-visible:ring-4 focus-visible:ring-yellow-300/80 z-50 flex items-center justify-center opacity-0 pointer-events-none" title="Retour en haut" aria-label="Retour en haut">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" /></svg>
-  </button>
-  <!-- Footer -->
-  <footer class="bg-yellow-700 text-yellow-50 mt-auto">
-    <div class="container mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+    </section>
+    <!-- Présentation rapide de l'apiculteur -->
+    <section
+      class="container mx-auto px-6 py-12 flex flex-col md:flex-row items-center gap-8 fade-section"
+    >
+      <div class="flex justify-center w-full md:w-auto">
+        <img
+          src="assets/apiculteur.jpg"
+          alt="Portrait Apiculteur"
+          class="w-40 h-40 rounded-full border-4 border-yellow-400 shadow-lg object-cover mx-auto"
+          loading="lazy"
+        />
+      </div>
       <div>
-        <p class="font-bold text-lg">Apiculteur Passionné</p>
-        <p class="text-sm">© 2024 Jean Dupont - Tous droits réservés</p>
+        <h2
+          class="text-2xl font-bold text-yellow-700 mb-2 flex items-center gap-2"
+        >
+          Jean Dupont, apiculteur passionné
+          <span
+            class="inline-block bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full ml-2"
+            >Bio</span
+          >
+        </h2>
+        <p class="text-gray-700 mb-2">
+          Installé en Provence depuis 20 ans, Jean perpétue la tradition
+          familiale avec amour et respect des abeilles. Certifié Bio, il partage
+          son savoir-faire et propose des produits d'exception.
+        </p>
+        <a
+          href="apiculteur.html"
+          class="text-yellow-600 hover:underline font-semibold"
+          >En savoir plus</a
+        >
       </div>
-      <ul class="flex gap-4 text-sm">
-        <li><a href="mentions-legales.html" class="hover:underline">Mentions légales</a></li>
-        <li><a href="contact.html" class="hover:underline">Contact</a></li>
-        <li><a href="https://facebook.com" target="_blank" class="hover:underline">Facebook</a></li>
-        <li><a href="https://instagram.com" target="_blank" class="hover:underline">Instagram</a></li>
-      </ul>
+    </section>
+    <!-- Sélection de produits phares -->
+    <section class="bg-white py-12 fade-section">
+      <div class="container mx-auto px-2 md:px-6">
+        <h2
+          class="text-2xl font-bold text-yellow-700 mb-6 flex items-center gap-2"
+        >
+          Nos produits phares
+          <span
+            class="inline-block bg-yellow-200 text-yellow-800 text-xs px-2 py-1 rounded-full"
+            >Nouveautés</span
+          >
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div
+            class="bg-yellow-50 rounded-2xl md:rounded-xl p-0 shadow-md md:shadow-lg relative group transition flex flex-col overflow-hidden border border-yellow-100 mx-1 md:mx-0 hover:scale-105 hover:shadow-2xl duration-300"
+          >
+            <span
+              class="absolute top-3 right-3 bg-green-500 text-white text-xs px-2 py-1 rounded-full shadow z-10"
+              >Bio</span
+            >
+            <div
+              class="w-full h-48 md:h-56 bg-yellow-100 flex items-center justify-center rounded-t-2xl md:rounded-t-xl overflow-hidden"
+            >
+              <img
+                src="assets/miel-acacia.jpg"
+                alt="Miel d'acacia"
+                class="w-full h-full object-cover rounded-t-2xl md:rounded-t-xl"
+                loading="lazy"
+              />
+            </div>
+            <div
+              class="p-4 md:p-5 flex-1 flex flex-col justify-between items-center text-center"
+            >
+              <h3 class="font-bold text-lg mb-1 text-yellow-900">
+                Miel d'acacia
+              </h3>
+              <p class="text-yellow-800 font-semibold mb-2">8,50 €</p>
+              <a
+                href="produits.html#acacia"
+                class="text-yellow-600 hover:underline mt-auto"
+                >Voir le produit</a
+              >
+            </div>
+          </div>
+          <div
+            class="bg-yellow-50 rounded-2xl md:rounded-xl p-0 shadow-md md:shadow-lg relative group transition flex flex-col overflow-hidden border border-yellow-100 mx-1 md:mx-0 hover:scale-105 hover:shadow-2xl duration-300"
+          >
+            <span
+              class="absolute top-3 right-3 bg-yellow-500 text-white text-xs px-2 py-1 rounded-full shadow z-10"
+              >Nouveauté</span
+            >
+            <div
+              class="w-full h-48 md:h-56 bg-yellow-100 flex items-center justify-center rounded-t-2xl md:rounded-t-xl overflow-hidden"
+            >
+              <img
+                src="assets/miel-lavande.jpg"
+                alt="Miel de lavande"
+                class="w-full h-full object-cover rounded-t-2xl md:rounded-t-xl"
+                loading="lazy"
+              />
+            </div>
+            <div
+              class="p-4 md:p-5 flex-1 flex flex-col justify-between items-center text-center"
+            >
+              <h3 class="font-bold text-lg mb-1 text-yellow-900">
+                Miel de lavande
+              </h3>
+              <p class="text-yellow-800 font-semibold mb-2">9,00 €</p>
+              <a
+                href="produits.html#lavande"
+                class="text-yellow-600 hover:underline mt-auto"
+                >Voir le produit</a
+              >
+            </div>
+          </div>
+          <div
+            class="bg-yellow-50 rounded-2xl md:rounded-xl p-0 shadow-md md:shadow-lg relative group transition flex flex-col overflow-hidden border border-yellow-100 mx-1 md:mx-0 hover:scale-105 hover:shadow-2xl duration-300"
+          >
+            <div
+              class="w-full h-48 md:h-56 bg-yellow-100 flex items-center justify-center rounded-t-2xl md:rounded-t-xl overflow-hidden"
+            >
+              <img
+                src="assets/pollen.jpg"
+                alt="Pollen"
+                class="w-full h-full object-cover rounded-t-2xl md:rounded-t-xl"
+                loading="lazy"
+              />
+            </div>
+            <div
+              class="p-4 md:p-5 flex-1 flex flex-col justify-between items-center text-center"
+            >
+              <h3 class="font-bold text-lg mb-1 text-yellow-900">Pollen</h3>
+              <p class="text-yellow-800 font-semibold mb-2">6,00 €</p>
+              <a
+                href="produits.html#pollen"
+                class="text-yellow-600 hover:underline mt-auto"
+                >Voir le produit</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Témoignages clients -->
+    <section class="container mx-auto px-6 py-12 fade-section">
+      <h2
+        class="text-2xl font-bold text-yellow-700 mb-6 flex items-center gap-2"
+      >
+        Ils nous font confiance
+        <svg
+          class="w-6 h-6 text-yellow-400"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path
+            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"
+          />
+        </svg>
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          class="bg-white rounded-lg p-6 shadow flex flex-col items-center group hover:shadow-xl transition"
+        >
+          <img
+            src="assets/client1.jpg"
+            alt="Photo client Marie L."
+            class="w-16 h-16 rounded-full object-cover mb-2 border-2 border-yellow-100 shadow"
+            loading="lazy"
+          />
+          <div class="flex items-center mb-2">
+            <span class="text-yellow-400 text-xl">★★★★★</span>
+          </div>
+          <p class="text-gray-700 mb-2 italic">
+            "Un miel exceptionnel, livraison rapide et soignée !"
+          </p>
+          <span class="text-sm text-gray-500">- Marie L.</span>
+        </div>
+        <div
+          class="bg-white rounded-lg p-6 shadow flex flex-col items-center group hover:shadow-xl transition"
+        >
+          <img
+            src="assets/client2.jpg"
+            alt="Photo client Paul G."
+            class="w-16 h-16 rounded-full object-cover mb-2 border-2 border-yellow-100 shadow"
+            loading="lazy"
+          />
+          <div class="flex items-center mb-2">
+            <span class="text-yellow-400 text-xl">★★★★★</span>
+          </div>
+          <p class="text-gray-700 mb-2 italic">
+            "On sent la passion et la qualité dans chaque pot."
+          </p>
+          <span class="text-sm text-gray-500">- Paul G.</span>
+        </div>
+        <div
+          class="bg-white rounded-lg p-6 shadow flex flex-col items-center group hover:shadow-xl transition"
+        >
+          <img
+            src="assets/client3.jpg"
+            alt="Photo client Sophie R."
+            class="w-16 h-16 rounded-full object-cover mb-2 border-2 border-yellow-100 shadow"
+            loading="lazy"
+          />
+          <div class="flex items-center mb-2">
+            <span class="text-yellow-400 text-xl">★★★★★</span>
+          </div>
+          <p class="text-gray-700 mb-2 italic">
+            "Des produits variés et un accueil chaleureux à la ferme."
+          </p>
+          <span class="text-sm text-gray-500">- Sophie R.</span>
+        </div>
+      </div>
+    </section>
+    <!-- Actualités récentes -->
+    <section
+      class="bg-gradient-to-br from-yellow-100 via-yellow-50 to-white py-12 fade-section"
+    >
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-2xl font-bold text-yellow-700 mb-6 flex items-center gap-2"
+        >
+          Actualités de la ruche
+          <svg
+            class="w-6 h-6 text-yellow-500"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path d="M13 7H7v6h6V7z" />
+            <path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm-6-8a6 6 0 1112 0A6 6 0 014 10z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-white rounded-lg p-6 shadow group transition hover:scale-105 hover:shadow-2xl flex flex-col items-center hover:z-10 duration-300"
+          >
+            <div
+              class="w-full h-80 bg-yellow-50 flex items-center justify-center mb-4 rounded-t-lg overflow-hidden"
+            >
+              <img
+                src="assets/recolte-miel.jpg"
+                alt="Récolte de printemps"
+                class="w-full h-full object-cover rounded-t-lg"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="font-bold text-lg mb-2">
+              Récolte de printemps réussie !
+            </h3>
+            <p class="text-gray-700 mb-2">
+              Nos abeilles ont produit un miel d'acacia exceptionnel cette
+              année. Merci à tous pour votre soutien !
+            </p>
+            <a
+              href="actualites.html#recolte-printemps"
+              class="text-yellow-600 hover:underline"
+              >Lire la suite</a
+            >
+          </div>
+          <div
+            class="bg-white rounded-lg p-6 shadow group transition hover:scale-105 hover:shadow-2xl flex flex-col items-center hover:z-10 duration-300"
+          >
+            <div
+              class="w-full h-80 bg-yellow-50 flex items-center justify-center mb-4 rounded-t-lg overflow-hidden"
+            >
+              <img
+                src="assets/marche-fermier.jpg"
+                alt="Marché fermier apicole"
+                class="w-full h-full object-cover rounded-t-lg"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="font-bold text-lg mb-2">Marché fermier ce dimanche</h3>
+            <p class="text-gray-700 mb-2">
+              Retrouvez-nous au marché de la ville pour découvrir nos nouveautés
+              et déguster nos produits.
+            </p>
+            <a
+              href="actualites.html#marche-dimanche"
+              class="text-yellow-600 hover:underline"
+              >Lire la suite</a
+            >
+          </div>
+          <div
+            class="bg-white rounded-lg p-6 shadow group transition hover:scale-105 hover:shadow-2xl flex flex-col items-center hover:z-10 duration-300"
+          >
+            <div
+              class="w-full h-80 bg-yellow-50 flex items-center justify-center mb-4 rounded-t-lg overflow-hidden"
+            >
+              <img
+                src="assets/entretien-abeilles.jpg"
+                alt="Conseils pour protéger les abeilles"
+                class="w-full h-full object-cover rounded-t-lg"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="font-bold text-lg mb-2">
+              Conseils pour protéger les abeilles
+            </h3>
+            <p class="text-gray-700 mb-2">
+              Découvrez nos astuces pour favoriser la biodiversité et aider les
+              pollinisateurs dans votre jardin.
+            </p>
+            <a
+              href="actualites.html#proteger-abeilles"
+              class="text-yellow-600 hover:underline"
+              >Lire la suite</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Bouton retour en haut -->
+    <button
+      id="backToTop"
+      class="fixed bottom-6 right-6 bg-gradient-to-tr from-yellow-400 to-yellow-600 text-white p-3 rounded-full shadow-xl hover:scale-110 hover:shadow-2xl transition-all duration-300 ease-out ring-2 ring-yellow-200/60 focus:outline-none focus-visible:ring-4 focus-visible:ring-yellow-300/80 z-50 flex items-center justify-center opacity-0 pointer-events-none"
+      title="Retour en haut"
+      aria-label="Retour en haut"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M5 15l7-7 7 7"
+        />
+      </svg>
+    </button>
+    <!-- Footer -->
+    <footer class="bg-yellow-700 text-yellow-50 mt-auto">
+      <div
+        class="container mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <div>
+          <p class="font-bold text-lg">Apiculteur Passionné</p>
+          <p class="text-sm">© 2024 Jean Dupont - Tous droits réservés</p>
+        </div>
+        <ul class="flex gap-4 text-sm">
+          <li>
+            <a href="mentions-legales.html" class="hover:underline"
+              >Mentions légales</a
+            >
+          </li>
+          <li><a href="contact.html" class="hover:underline">Contact</a></li>
+          <li>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              class="hover:underline"
+              >Facebook</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              class="hover:underline"
+              >Instagram</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <!-- Lightbox pour images -->
+    <div
+      id="lightboxOverlay"
+      class="fixed inset-0 bg-black/70 z-[100] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300"
+    >
+      <div
+        class="relative max-w-3xl w-[90vw] max-h-[90vh] flex items-center justify-center"
+      >
+        <button
+          id="lightboxClose"
+          class="absolute top-2 right-2 bg-white/80 hover:bg-yellow-100 rounded-full p-2 shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 cursor-pointer"
+          aria-label="Fermer l'image"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-7 w-7 text-yellow-700"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+        <img
+          id="lightboxImg"
+          src=""
+          alt="Image agrandie"
+          class="max-w-full max-h-[80vh] rounded-xl shadow-xl border-4 border-white object-contain bg-white"
+        />
+      </div>
     </div>
-  </footer>
-  <!-- Lightbox pour images -->
-  <div id="lightboxOverlay" class="fixed inset-0 bg-black/70 z-[100] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
-    <div class="relative max-w-3xl w-[90vw] max-h-[90vh] flex items-center justify-center">
-      <button id="lightboxClose" class="absolute top-2 right-2 bg-white/80 hover:bg-yellow-100 rounded-full p-2 shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 cursor-pointer" aria-label="Fermer l'image">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-yellow-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
-      </button>
-      <img id="lightboxImg" src="" alt="Image agrandie" class="max-w-full max-h-[80vh] rounded-xl shadow-xl border-4 border-white object-contain bg-white">
-    </div>
-  </div>
-</body>
+  </body>
 </html>
 
 <style>
-@keyframes bee-float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-  100% { transform: translateY(0); }
-}
-.animate-bee-float {
-  animation: bee-float 2.2s ease-in-out infinite;
-}
-#backToTop.show {
-  opacity: 1 !important;
-  pointer-events: auto !important;
-}
-#backToTop {
-  opacity: 0;
-  pointer-events: none;
-}
-.mobile-link {
-  width: 100%;
-  text-align: center;
-  padding: 0.75rem 0;
-  border-radius: 1rem;
-  transition: background 0.2s, color 0.2s;
-}
-.mobile-link:active,
-.mobile-link:hover,
-.mobile-link:focus {
-  background: linear-gradient(90deg, #fde68a 0%, #f59e42 100%);
-  color: #b45309 !important;
-}
-#mobileMenu.show {
-  opacity: 1 !important;
-  transform: translateX(0) !important;
-}
-#mobileMenu {
-  opacity: 0;
-  pointer-events: none;
-}
-.fade-section {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
-}
-.fade-section.visible {
-  opacity: 1;
-  transform: none;
-}
+  @keyframes bee-float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  .animate-bee-float {
+    animation: bee-float 2.2s ease-in-out infinite;
+  }
+  #backToTop.show {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+  #backToTop {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .mobile-link {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 0;
+    border-radius: 1rem;
+    transition: background 0.2s, color 0.2s;
+  }
+  .mobile-link:active,
+  .mobile-link:hover,
+  .mobile-link:focus {
+    background: linear-gradient(90deg, #fde68a 0%, #f59e42 100%);
+    color: #b45309 !important;
+  }
+  #mobileMenu.show {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+  }
+  #mobileMenu {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .fade-section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .fade-section.visible {
+    opacity: 1;
+    transform: none;
+  }
 </style>
