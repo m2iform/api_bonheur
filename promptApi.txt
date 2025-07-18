@@ -1,0 +1,82 @@
+Crée un site web complet et professionnel pour un apiculteur avec plusieurs pages HTML utilisant Tailwind CSS. Le site doit comprendre :
+
+STRUCTURE MULTI-PAGES :
+1. **index.html** - Page d'accueil
+2. **produits.html** - Catalogue des miels et produits
+3. **apiculteur.html** - À propos / Histoire de l'apiculteur
+4. **savoir-faire.html** - Processus d'apiculture et méthodes
+5. **actualites.html** - Blog/actualités de la ruche
+6. **contact.html** - Contact et localisation
+7. **mentions-legales.html** - Mentions légales
+
+CONTENU PAR PAGE :
+
+**Page d'accueil (index.html) :**
+- Hero avec slider d'images et slogan
+- Présentation rapide de l'apiculteur
+- Sélection de produits phares
+- Témoignages clients
+- Actualités récentes
+
+**Page produits (produits.html) :**
+- Grille complète des miels (acacia, tilleul, châtaignier, lavande, etc.)
+- Autres produits (pollen, gelée royale, cire, bougies)
+- Filtres par type/origine
+- Fiches produit détaillées avec prix
+- Panier d'achat (interface uniquement)
+
+**Page apiculteur (apiculteur.html) :**
+- Portrait et histoire personnelle
+- Passion pour l'apiculture
+- Certifications et labels
+- Photos de l'exploitation
+- Valeurs et engagement
+
+**Page savoir-faire (savoir-faire.html) :**
+- Cycle de vie des abeilles
+- Processus de récolte du miel
+- Méthodes d'extraction
+- Calendrier apicole
+- Photos et vidéos du travail
+
+**Page actualités (actualites.html) :**
+- Articles de blog sur l'apiculture
+- Nouvelles des ruches
+- Conseils pour protéger les abeilles
+- Événements et marchés
+- Archives par date
+
+**Page contact (contact.html) :**
+- Formulaire de contact complet
+- Coordonnées et horaires
+- Carte interactive
+- Réseaux sociaux
+- Vente directe à la ferme
+
+ÉLÉMENTS COMMUNS :
+- Header identique sur toutes les pages avec navigation
+- Footer avec liens rapides et informations
+- Breadcrumb sur chaque page
+- Bouton "retour en haut"
+- Design responsive uniforme
+
+DESIGN ET FONCTIONNALITÉS :
+- Navigation active selon la page courante
+- Palette dorée/naturelle cohérente
+- Animations de transition entre sections
+- Lightbox pour les galeries
+- Formulaires avec validation visuelle
+- Cartes interactives avec hover
+- Témoignages avec système de notation
+- Badges "Nouveauté" et "Bio"
+- Optimisation mobile-first
+
+TECHNIQUE :
+- HTML5 sémantique
+- Classes Tailwind CSS uniquement
+- JavaScript vanilla pour les interactions
+- Structure de fichiers organisée
+- Méta-tags SEO sur chaque page
+- Temps de chargement optimisé
+
+Assure-toi que chaque page soit complète, fonctionnelle et que la navigation entre les pages soit fluide.
