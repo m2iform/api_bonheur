@@ -128,11 +128,17 @@
               >Accueil</a
             >
           </li>
-          <li><a href="produits.html" class="nav-link">Produits</a></li>
-          <li><a href="apiculteur.html" class="nav-link">L'Apiculteur</a></li>
-          <li><a href="savoir-faire.html" class="nav-link">Savoir-faire</a></li>
-          <li><a href="actualites.html" class="nav-link">Actualités</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="/pages/produits.html" class="nav-link">Produits</a></li>
+          <li>
+            <a href="/pages/apiculteur.html" class="nav-link">L'Apiculteur</a>
+          </li>
+          <li>
+            <a href="/pages/savoir-faire.html" class="nav-link">Savoir-faire</a>
+          </li>
+          <li>
+            <a href="/pages/actualites.html" class="nav-link">Actualités</a>
+          </li>
+          <li><a href="/pages/contact.html" class="nav-link">Contact</a></li>
         </ul>
         <!-- Burger button mobile -->
         <button
@@ -281,31 +287,31 @@
           >Accueil</a
         >
         <a
-          href="produits.html"
+          href="/pages/produits.html"
           class="nav-link mobile-link focus-visible:ring-2 focus-visible:ring-yellow-400 active:scale-95 transition-transform cursor-pointer"
           aria-label="Produits"
           >Produits</a
         >
         <a
-          href="apiculteur.html"
+          href="/pages/apiculteur.html"
           class="nav-link mobile-link focus-visible:ring-2 focus-visible:ring-yellow-400 active:scale-95 transition-transform cursor-pointer"
           aria-label="L'Apiculteur"
           >L'Apiculteur</a
         >
         <a
-          href="savoir-faire.html"
+          href="/pages/savoir-faire.html"
           class="nav-link mobile-link focus-visible:ring-2 focus-visible:ring-yellow-400 active:scale-95 transition-transform cursor-pointer"
           aria-label="Savoir-faire"
           >Savoir-faire</a
         >
         <a
-          href="actualites.html"
+          href="/pages/actualites.html"
           class="nav-link mobile-link focus-visible:ring-2 focus-visible:ring-yellow-400 active:scale-95 transition-transform cursor-pointer"
           aria-label="Actualités"
           >Actualités</a
         >
         <a
-          href="contact.html"
+          href="/pages/contact.html"
           class="nav-link mobile-link focus-visible:ring-2 focus-visible:ring-yellow-400 active:scale-95 transition-transform cursor-pointer"
           aria-label="Contact"
           >Contact</a
@@ -365,20 +371,20 @@
           >
             <div class="slider h-full w-full">
               <img
-                src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80"
-                alt="Abeille sur fleur"
+                src="assets/entretien-abeilles.jpg"
+                alt="Entretien des abeilles"
                 class="slider-img absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-700 group-hover:scale-105 group-hover:brightness-90"
                 loading="lazy"
               />
               <img
-                src="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=800&q=80"
-                alt="Apiculteur inspectant une ruche"
+                src="assets/recolte-miel.jpg"
+                alt="Récolte du miel"
                 class="slider-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700 group-hover:scale-105 group-hover:brightness-90"
                 loading="lazy"
               />
               <img
-                src="https://images.unsplash.com/photo-1502741126161-b048400d98b4?auto=format&fit=crop&w=800&q=80"
-                alt="Rayon de miel"
+                src="assets/miel-acacia.jpg"
+                alt="Miel d'acacia"
                 class="slider-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700 group-hover:scale-105 group-hover:brightness-90"
                 loading="lazy"
               />
@@ -739,11 +745,13 @@
         </div>
         <ul class="flex gap-4 text-sm">
           <li>
-            <a href="mentions-legales.html" class="hover:underline"
+            <a href="/pages/mentions-legales.html" class="hover:underline"
               >Mentions légales</a
             >
           </li>
-          <li><a href="contact.html" class="hover:underline">Contact</a></li>
+          <li>
+            <a href="/pages/contact.html" class="hover:underline">Contact</a>
+          </li>
           <li>
             <a
               href="https://facebook.com"
@@ -841,6 +849,7 @@
   #mobileMenu.show {
     opacity: 1 !important;
     transform: translateX(0) !important;
+    pointer-events: auto !important;
   }
   #mobileMenu {
     opacity: 0;
