@@ -6,9 +6,92 @@
     <title>Actualités | Apiculteur Passionné</title>
     <link href="../dist/output.css" rel="stylesheet" />
     <script defer src="../dist/main.js"></script>
+    <style>
+      .actualites-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      @media (min-width: 700px) {
+        .actualites-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (min-width: 1100px) {
+        .actualites-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      .card-actus {
+        background: #fff;
+        border: 2px solid #ffd600;
+        box-shadow: 0 4px 24px #ffd60022, 0 1.5px 0 #ffa00011;
+        border-radius: 1.5rem;
+        padding: 2rem 1.5rem;
+        transition: box-shadow 0.2s, transform 0.2s;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        overflow: hidden;
+        min-height: 480px;
+        height: 100%;
+      }
+      .card-actus:hover {
+        box-shadow: 0 8px 32px #ffa00044, 0 2px 0 #ffa00022;
+        transform: translateY(-2px) scale(1.01);
+      }
+      .card-actus-img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 1rem;
+        box-shadow: 0 2px 8px #ffd60033;
+        margin-bottom: 1rem;
+        background: #f3f3f3
+          url("https://via.placeholder.com/320x180?text=Image") center/cover
+          no-repeat;
+        display: block;
+      }
+      .card-actus-content {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      .card-actus-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #b45309;
+        margin-bottom: 0.5rem;
+        min-height: 2.5em;
+        display: flex;
+        align-items: flex-end;
+      }
+      .card-actus-date {
+        font-size: 0.95rem;
+        color: #888;
+        margin-bottom: 0.5rem;
+      }
+      .card-actus-summary {
+        color: #444;
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        min-height: 4.8em;
+        max-height: 5.2em;
+      }
+      .card-actus-btn {
+        margin-top: auto;
+      }
+    </style>
   </head>
   <body class="bg-white text-gray-800 min-h-screen flex flex-col font-sans">
-    <!-- Header & Navigation (copié depuis index.html) -->
+    <!-- Header identique -->
     <header
       class="bg-white/95 shadow-sm sticky top-0 z-50 border-b border-yellow-100"
     >
@@ -18,123 +101,25 @@
       >
         <a href="../index.html" class="flex items-center gap-2">
           <span class="block h-10 w-10 animate-bee-float">
-            <svg
-              viewBox="0 0 64 64"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-10 w-10"
-            >
-              <ellipse
-                cx="32"
-                cy="38"
-                rx="14"
-                ry="18"
-                fill="#FDE68A"
-                stroke="#F59E42"
-                stroke-width="2"
-              />
-              <rect x="24" y="28" width="16" height="4" rx="2" fill="#F59E42" />
-              <rect x="24" y="36" width="16" height="4" rx="2" fill="#F59E42" />
-              <rect x="24" y="44" width="16" height="4" rx="2" fill="#F59E42" />
-              <circle
-                cx="32"
-                cy="22"
-                r="8"
-                fill="#FDE68A"
-                stroke="#F59E42"
-                stroke-width="2"
-              />
-              <g>
-                <ellipse
-                  id="wingL"
-                  cx="20"
-                  cy="18"
-                  rx="8"
-                  ry="16"
-                  fill="#fff"
-                  fill-opacity=".7"
-                >
-                  <animateTransform
-                    attributeName="transform"
-                    type="rotate"
-                    values="0 20 18;15 20 18;0 20 18"
-                    dur="1s"
-                    repeatCount="indefinite"
-                  />
-                </ellipse>
-                <ellipse
-                  id="wingR"
-                  cx="44"
-                  cy="18"
-                  rx="8"
-                  ry="16"
-                  fill="#fff"
-                  fill-opacity=".7"
-                >
-                  <animateTransform
-                    attributeName="transform"
-                    type="rotate"
-                    values="0 44 18;-15 44 18;0 44 18"
-                    dur="1s"
-                    repeatCount="indefinite"
-                  />
-                </ellipse>
-              </g>
-              <path
-                d="M28 14 Q26 10 22 12"
-                stroke="#F59E42"
-                stroke-width="2"
-                fill="none"
-              />
-              <path
-                d="M36 14 Q38 10 42 12"
-                stroke="#F59E42"
-                stroke-width="2"
-                fill="none"
-              />
-              <circle cx="29" cy="22" r="1.2" fill="#222" />
-              <circle cx="35" cy="22" r="1.2" fill="#222" />
-              <ellipse
-                cx="32"
-                cy="60"
-                rx="10"
-                ry="2.5"
-                fill="#F59E42"
-                fill-opacity=".2"
-              />
-            </svg>
+            <!-- SVG identique -->
           </span>
           <span class="font-bold text-xl text-yellow-700"
             >Apiculteur Passionné</span
           >
         </a>
         <ul class="hidden md:flex gap-6 text-lg">
-          <li><a href="/index.html" class="nav-link">Accueil</a></li>
+          <li><a href="../index.html" class="nav-link">Accueil</a></li>
+          <li><a href="produits.html" class="nav-link">Produits</a></li>
+          <li><a href="apiculteur.html" class="nav-link">L'Apiculteur</a></li>
+          <li><a href="savoir-faire.html" class="nav-link">Savoir-faire</a></li>
           <li>
-            <a href="/api_bonheur/pages/produits.html" class="nav-link"
-              >Produits</a
-            >
-          </li>
-          <li>
-            <a href="/api_bonheur/pages/apiculteur.html" class="nav-link"
-              >L'Apiculteur</a
-            >
-          </li>
-          <li>
-            <a href="/api_bonheur/pages/savoir-faire.html" class="nav-link"
-              >Savoir-faire</a
-            >
-          </li>
-          <li>
-            <a href="/api_bonheur/pages/actualites.html" class="nav-link"
+            <a
+              href="actualites.html"
+              class="nav-link text-yellow-700 font-semibold border-b-2 border-yellow-400"
               >Actualités</a
             >
           </li>
-          <li>
-            <a href="/api_bonheur/pages/contact.html" class="nav-link"
-              >Contact</a
-            >
-          </li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
         <button
           id="burgerBtn"
@@ -188,48 +173,449 @@
           </svg>
         </button>
         <a
-          href="/index.html"
+          href="../index.html"
           class="nav-link mobile-link focus-visible:ring-2 focus-visible:ring-yellow-400 active:scale-95 transition-transform cursor-pointer"
           aria-label="Accueil"
           >Accueil</a
         >
         <a
-          href="/api_bonheur/pages/produits.html"
+          href="produits.html"
           class="nav-link mobile-link focus-visible:ring-2 focus-visible:ring-yellow-400 active:scale-95 transition-transform cursor-pointer"
           aria-label="Produits"
           >Produits</a
         >
         <a
-          href="/api_bonheur/pages/apiculteur.html"
+          href="apiculteur.html"
           class="nav-link mobile-link focus-visible:ring-2 focus-visible:ring-yellow-400 active:scale-95 transition-transform cursor-pointer"
           aria-label="L'Apiculteur"
           >L'Apiculteur</a
         >
         <a
-          href="/api_bonheur/pages/savoir-faire.html"
+          href="savoir-faire.html"
           class="nav-link mobile-link focus-visible:ring-2 focus-visible:ring-yellow-400 active:scale-95 transition-transform cursor-pointer"
           aria-label="Savoir-faire"
           >Savoir-faire</a
         >
         <a
-          href="/api_bonheur/pages/actualites.html"
+          href="actualites.html"
           class="nav-link mobile-link focus-visible:ring-2 focus-visible:ring-yellow-400 active:scale-95 transition-transform cursor-pointer"
           aria-label="Actualités"
           >Actualités</a
         >
         <a
-          href="/api_bonheur/pages/contact.html"
+          href="contact.html"
           class="nav-link mobile-link focus-visible:ring-2 focus-visible:ring-yellow-400 active:scale-95 transition-transform cursor-pointer"
           aria-label="Contact"
           >Contact</a
         >
       </nav>
     </header>
-    <main
-      class="container mx-auto px-6 py-12 flex-1 flex flex-col items-center justify-center"
-    >
-      <h1 class="text-3xl font-bold text-yellow-700 mb-4">Actualités</h1>
-      <p class="text-lg text-gray-600">Page en construction…</p>
+    <main class="container mx-auto px-6 py-12 flex-1 w-full">
+      <h1
+        class="text-3xl md:text-4xl font-bold text-yellow-700 mb-8 text-center"
+      >
+        Actualités de la ruche
+      </h1>
+      <div class="actualites-grid">
+        <section id="recolte-printemps" style="margin-bottom: 0">
+          <div class="card-actus">
+            <img
+              src="../assets/recolte-miel.jpg"
+              alt="Récolte de printemps"
+              class="card-actus-img"
+              onerror="this.style.background='#f3f3f3 url(https://via.placeholder.com/320x180?text=Image) center/cover no-repeat';this.src='';"
+            />
+            <div class="card-actus-content">
+              <div class="card-actus-title">Récolte de printemps réussie !</div>
+              <div class="card-actus-date">Publié le 15 mai 2024</div>
+              <div class="card-actus-summary">
+                Nos abeilles ont profité d’une météo idéale pour produire un
+                miel d’acacia exceptionnel cette année. La floraison abondante
+                et le travail minutieux de nos colonies ont permis une récolte
+                généreuse, à la fois en quantité et en qualité. Merci à tous
+                pour votre soutien et votre fidélité !
+              </div>
+              <a
+                href="actualite-recolte-printemps.html"
+                class="card-actus-btn"
+                style="
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 0.5em;
+                  background: linear-gradient(90deg, #ffd600 0%, #ffa000 100%);
+                  color: #222;
+                  font-weight: bold;
+                  font-size: 1.1rem;
+                  padding: 0.7em 1.5em;
+                  border-radius: 999px;
+                  border: 2px solid #ffa000;
+                  box-shadow: 0 4px 16px #0001;
+                  text-decoration: none;
+                  transition: background 0.2s, transform 0.2s;
+                "
+                onmouseover="this.style.background='linear-gradient(90deg,#FFA000 0%,#FFD600 100%)';this.style.transform='scale(1.05)';"
+                onmouseout="this.style.background='linear-gradient(90deg,#FFD600 0%,#FFA000 100%)';this.style.transform='none';"
+                >Détail de l’actualité
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#222"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="9 6 15 12 9 18" /></svg
+              ></a>
+            </div>
+          </div>
+        </section>
+        <section id="marche-dimanche" style="margin-bottom: 0">
+          <div class="card-actus">
+            <img
+              src="../assets/marche-fermier.jpg"
+              alt="Marché fermier ce dimanche"
+              class="card-actus-img"
+              onerror="this.style.background='#f3f3f3 url(https://via.placeholder.com/320x180?text=Image) center/cover no-repeat';this.src='';"
+            />
+            <div class="card-actus-content">
+              <div class="card-actus-title">Marché fermier ce dimanche</div>
+              <div class="card-actus-date">Publié le 10 mai 2024</div>
+              <div class="card-actus-summary">
+                Retrouvez-nous ce dimanche au marché fermier de la ville ! Nous
+                vous proposerons une dégustation de nos miels, pollen, gelée
+                royale et autres produits de la ruche. Venez échanger avec nous,
+                découvrir nos nouveautés et profiter de conseils personnalisés
+                sur l’apiculture et la dégustation du miel. Le marché se tiendra
+                de 8h à 13h sur la place principale. Nous espérons vous y voir
+                nombreux !
+              </div>
+              <a
+                href="actualite-marche-dimanche.html"
+                class="card-actus-btn"
+                style="
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 0.5em;
+                  background: linear-gradient(90deg, #ffd600 0%, #ffa000 100%);
+                  color: #222;
+                  font-weight: bold;
+                  font-size: 1.1rem;
+                  padding: 0.7em 1.5em;
+                  border-radius: 999px;
+                  border: 2px solid #ffa000;
+                  box-shadow: 0 4px 16px #0001;
+                  text-decoration: none;
+                  transition: background 0.2s, transform 0.2s;
+                "
+                onmouseover="this.style.background='linear-gradient(90deg,#FFA000 0%,#FFD600 100%)';this.style.transform='scale(1.05)';"
+                onmouseout="this.style.background='linear-gradient(90deg,#FFD600 0%,#FFA000 100%)';this.style.transform='none';"
+                >Détail de l’actualité
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#222"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="9 6 15 12 9 18" /></svg
+              ></a>
+            </div>
+          </div>
+        </section>
+        <section id="proteger-abeilles" style="margin-bottom: 0">
+          <div class="card-actus">
+            <img
+              src="../assets/entretien-abeilles.jpg"
+              alt="Conseils pour protéger les abeilles"
+              class="card-actus-img"
+              onerror="this.style.background='#f3f3f3 url(https://via.placeholder.com/320x180?text=Image) center/cover no-repeat';this.src='';"
+            />
+            <div class="card-actus-content">
+              <div class="card-actus-title">
+                Conseils pour protéger les abeilles
+              </div>
+              <div class="card-actus-date">Publié le 2 mai 2024</div>
+              <div class="card-actus-summary">
+                Les abeilles jouent un rôle essentiel dans la pollinisation et
+                la biodiversité. Voici quelques gestes simples pour les aider :
+                planter des fleurs mellifères, éviter les pesticides, installer
+                un abreuvoir, et sensibiliser votre entourage à leur protection.
+                Ensemble, nous pouvons agir pour préserver les pollinisateurs et
+                garantir la richesse de notre environnement. Merci pour votre
+                engagement !
+              </div>
+              <a
+                href="actualite-proteger-abeilles.html"
+                class="card-actus-btn"
+                style="
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 0.5em;
+                  background: linear-gradient(90deg, #ffd600 0%, #ffa000 100%);
+                  color: #222;
+                  font-weight: bold;
+                  font-size: 1.1rem;
+                  padding: 0.7em 1.5em;
+                  border-radius: 999px;
+                  border: 2px solid #ffa000;
+                  box-shadow: 0 4px 16px #0001;
+                  text-decoration: none;
+                  transition: background 0.2s, transform 0.2s;
+                "
+                onmouseover="this.style.background='linear-gradient(90deg,#FFA000 0%,#FFD600 100%)';this.style.transform='scale(1.05)';"
+                onmouseout="this.style.background='linear-gradient(90deg,#FFD600 0%,#FFA000 100%)';this.style.transform='none';"
+                >Détail de l’actualité
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#222"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="9 6 15 12 9 18" /></svg
+              ></a>
+            </div>
+          </div>
+        </section>
+        <section id="nouvelle-ruche" style="margin-bottom: 2.5rem">
+          <div
+            style="
+              background: #fff;
+              border: 2px solid #ffd600;
+              box-shadow: 0 4px 24px #ffd60022, 0 1.5px 0 #ffa00011;
+              border-radius: 1.5rem;
+              padding: 2rem 1.5rem;
+              transition: box-shadow 0.2s, transform 0.2s;
+              display: flex;
+              flex-direction: column;
+              gap: 1.2rem;
+              align-items: flex-start;
+              position: relative;
+              overflow: hidden;
+            "
+            onmouseover="this.style.boxShadow='0 8px 32px #FFA00044,0 2px 0 #FFA00022';this.style.transform='translateY(-2px) scale(1.01)';"
+            onmouseout="this.style.boxShadow='0 4px 24px #FFD60022,0 1.5px 0 #FFA00011';this.style.transform='none';"
+          >
+            <img
+              src="../assets/nouvelle-ruche.jpg"
+              alt="Nouvelle ruche installée"
+              style="
+                width: 100%;
+                max-width: 320px;
+                height: 180px;
+                object-fit: cover;
+                border-radius: 1rem;
+                box-shadow: 0 2px 8px #ffd60033;
+                margin-bottom: 0.5rem;
+              "
+            />
+            <h2 class="text-2xl font-bold text-yellow-800 mb-2">
+              Nouvelle ruche installée
+            </h2>
+            <p class="text-sm text-gray-500 mb-2">Publié le 28 mai 2024</p>
+            <p class="mb-4 text-gray-700">
+              Nous avons installé une nouvelle ruche au verger ! Les abeilles
+              s’y acclimatent déjà et la colonie semble très dynamique.
+              Rendez-vous dans quelques semaines pour goûter le premier miel de
+              cette ruche !
+            </p>
+            <a
+              href="#"
+              style="
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5em;
+                background: linear-gradient(90deg, #ffd600 0%, #ffa000 100%);
+                color: #222;
+                font-weight: bold;
+                font-size: 1.1rem;
+                padding: 0.7em 1.5em;
+                border-radius: 999px;
+                border: 2px solid #ffa000;
+                box-shadow: 0 4px 16px #0001;
+                text-decoration: none;
+                margin-top: 1em;
+                transition: background 0.2s, transform 0.2s;
+              "
+              onmouseover="this.style.background='linear-gradient(90deg,#FFA000 0%,#FFD600 100%)';this.style.transform='scale(1.05)';"
+              onmouseout="this.style.background='linear-gradient(90deg,#FFD600 0%,#FFA000 100%)';this.style.transform='none';"
+              >Détail de l’actualité
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#222"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="9 6 15 12 9 18" /></svg
+            ></a>
+          </div>
+        </section>
+        <section id="atelier-miel" style="margin-bottom: 2.5rem">
+          <div
+            style="
+              background: #fff;
+              border: 2px solid #ffd600;
+              box-shadow: 0 4px 24px #ffd60022, 0 1.5px 0 #ffa00011;
+              border-radius: 1.5rem;
+              padding: 2rem 1.5rem;
+              transition: box-shadow 0.2s, transform 0.2s;
+              display: flex;
+              flex-direction: column;
+              gap: 1.2rem;
+              align-items: flex-start;
+              position: relative;
+              overflow: hidden;
+            "
+            onmouseover="this.style.boxShadow='0 8px 32px #FFA00044,0 2px 0 #FFA00022';this.style.transform='translateY(-2px) scale(1.01)';"
+            onmouseout="this.style.boxShadow='0 4px 24px #FFD60022,0 1.5px 0 #FFA00011';this.style.transform='none';"
+          >
+            <img
+              src="../assets/atelier-miel.jpg"
+              alt="Atelier découverte du miel"
+              style="
+                width: 100%;
+                max-width: 320px;
+                height: 180px;
+                object-fit: cover;
+                border-radius: 1rem;
+                box-shadow: 0 2px 8px #ffd60033;
+                margin-bottom: 0.5rem;
+              "
+            />
+            <h2 class="text-2xl font-bold text-yellow-800 mb-2">
+              Atelier découverte du miel
+            </h2>
+            <p class="text-sm text-gray-500 mb-2">Publié le 20 mai 2024</p>
+            <p class="mb-4 text-gray-700">
+              Retour en images sur notre atelier du week-end : extraction du
+              miel, dégustation, et découverte du monde des abeilles pour petits
+              et grands. Merci à tous les participants pour leur enthousiasme !
+            </p>
+            <a
+              href="#"
+              style="
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5em;
+                background: linear-gradient(90deg, #ffd600 0%, #ffa000 100%);
+                color: #222;
+                font-weight: bold;
+                font-size: 1.1rem;
+                padding: 0.7em 1.5em;
+                border-radius: 999px;
+                border: 2px solid #ffa000;
+                box-shadow: 0 4px 16px #0001;
+                text-decoration: none;
+                margin-top: 1em;
+                transition: background 0.2s, transform 0.2s;
+              "
+              onmouseover="this.style.background='linear-gradient(90deg,#FFA000 0%,#FFD600 100%)';this.style.transform='scale(1.05)';"
+              onmouseout="this.style.background='linear-gradient(90deg,#FFD600 0%,#FFA000 100%)';this.style.transform='none';"
+              >Détail de l’actualité
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#222"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="9 6 15 12 9 18" /></svg
+            ></a>
+          </div>
+        </section>
+        <section id="label-qualite" style="margin-bottom: 2.5rem">
+          <div
+            style="
+              background: #fff;
+              border: 2px solid #ffd600;
+              box-shadow: 0 4px 24px #ffd60022, 0 1.5px 0 #ffa00011;
+              border-radius: 1.5rem;
+              padding: 2rem 1.5rem;
+              transition: box-shadow 0.2s, transform 0.2s;
+              display: flex;
+              flex-direction: column;
+              gap: 1.2rem;
+              align-items: flex-start;
+              position: relative;
+              overflow: hidden;
+            "
+            onmouseover="this.style.boxShadow='0 8px 32px #FFA00044,0 2px 0 #FFA00022';this.style.transform='translateY(-2px) scale(1.01)';"
+            onmouseout="this.style.boxShadow='0 4px 24px #FFD60022,0 1.5px 0 #FFA00011';this.style.transform='none';"
+          >
+            <img
+              src="../assets/label-qualite.jpg"
+              alt="Label qualité obtenu"
+              style="
+                width: 100%;
+                max-width: 320px;
+                height: 180px;
+                object-fit: cover;
+                border-radius: 1rem;
+                box-shadow: 0 2px 8px #ffd60033;
+                margin-bottom: 0.5rem;
+              "
+            />
+            <h2 class="text-2xl font-bold text-yellow-800 mb-2">
+              Un nouveau label qualité !
+            </h2>
+            <p class="text-sm text-gray-500 mb-2">Publié le 12 mai 2024</p>
+            <p class="mb-4 text-gray-700">
+              Notre exploitation vient d’obtenir le label « Miel de Provence –
+              Qualité supérieure ». Une belle reconnaissance pour notre travail
+              et notre engagement en faveur d’une apiculture respectueuse de
+              l’environnement.
+            </p>
+            <a
+              href="#"
+              style="
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5em;
+                background: linear-gradient(90deg, #ffd600 0%, #ffa000 100%);
+                color: #222;
+                font-weight: bold;
+                font-size: 1.1rem;
+                padding: 0.7em 1.5em;
+                border-radius: 999px;
+                border: 2px solid #ffa000;
+                box-shadow: 0 4px 16px #0001;
+                text-decoration: none;
+                margin-top: 1em;
+                transition: background 0.2s, transform 0.2s;
+              "
+              onmouseover="this.style.background='linear-gradient(90deg,#FFA000 0%,#FFD600 100%)';this.style.transform='scale(1.05)';"
+              onmouseout="this.style.background='linear-gradient(90deg,#FFD600 0%,#FFA000 100%)';this.style.transform='none';"
+              >Détail de l’actualité
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#222"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="9 6 15 12 9 18" /></svg
+            ></a>
+          </div>
+        </section>
+      </div>
     </main>
     <footer class="bg-yellow-700 text-yellow-50 mt-auto">
       <div
@@ -241,17 +627,11 @@
         </div>
         <ul class="flex gap-4 text-sm">
           <li>
-            <a
-              href="/api_bonheur/pages/mentions-legales.html"
-              class="hover:underline"
+            <a href="mentions-legales.html" class="hover:underline"
               >Mentions légales</a
             >
           </li>
-          <li>
-            <a href="/api_bonheur/pages/contact.html" class="hover:underline"
-              >Contact</a
-            >
-          </li>
+          <li><a href="contact.html" class="hover:underline">Contact</a></li>
           <li>
             <a
               href="https://facebook.com"

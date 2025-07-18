@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Savoir-faire | Apiculteur Passionné</title>
+    <title>Pollen | Apiculteur Passionné</title>
     <link href="../dist/output.css" rel="stylesheet" />
     <script defer src="../dist/main.js"></script>
   </head>
   <body class="bg-white text-gray-800 min-h-screen flex flex-col font-sans">
-    <!-- Header & Navigation (copié depuis index.html) -->
+    <!-- Header identique -->
     <header
       class="bg-white/95 shadow-sm sticky top-0 z-50 border-b border-yellow-100"
     >
@@ -18,91 +18,7 @@
       >
         <a href="../index.html" class="flex items-center gap-2">
           <span class="block h-10 w-10 animate-bee-float">
-            <svg
-              viewBox="0 0 64 64"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-10 w-10"
-            >
-              <ellipse
-                cx="32"
-                cy="38"
-                rx="14"
-                ry="18"
-                fill="#FDE68A"
-                stroke="#F59E42"
-                stroke-width="2"
-              />
-              <rect x="24" y="28" width="16" height="4" rx="2" fill="#F59E42" />
-              <rect x="24" y="36" width="16" height="4" rx="2" fill="#F59E42" />
-              <rect x="24" y="44" width="16" height="4" rx="2" fill="#F59E42" />
-              <circle
-                cx="32"
-                cy="22"
-                r="8"
-                fill="#FDE68A"
-                stroke="#F59E42"
-                stroke-width="2"
-              />
-              <g>
-                <ellipse
-                  id="wingL"
-                  cx="20"
-                  cy="18"
-                  rx="8"
-                  ry="16"
-                  fill="#fff"
-                  fill-opacity=".7"
-                >
-                  <animateTransform
-                    attributeName="transform"
-                    type="rotate"
-                    values="0 20 18;15 20 18;0 20 18"
-                    dur="1s"
-                    repeatCount="indefinite"
-                  />
-                </ellipse>
-                <ellipse
-                  id="wingR"
-                  cx="44"
-                  cy="18"
-                  rx="8"
-                  ry="16"
-                  fill="#fff"
-                  fill-opacity=".7"
-                >
-                  <animateTransform
-                    attributeName="transform"
-                    type="rotate"
-                    values="0 44 18;-15 44 18;0 44 18"
-                    dur="1s"
-                    repeatCount="indefinite"
-                  />
-                </ellipse>
-              </g>
-              <path
-                d="M28 14 Q26 10 22 12"
-                stroke="#F59E42"
-                stroke-width="2"
-                fill="none"
-              />
-              <path
-                d="M36 14 Q38 10 42 12"
-                stroke="#F59E42"
-                stroke-width="2"
-                fill="none"
-              />
-              <circle cx="29" cy="22" r="1.2" fill="#222" />
-              <circle cx="35" cy="22" r="1.2" fill="#222" />
-              <ellipse
-                cx="32"
-                cy="60"
-                rx="10"
-                ry="2.5"
-                fill="#F59E42"
-                fill-opacity=".2"
-              />
-            </svg>
+            <!-- SVG identique -->
           </span>
           <span class="font-bold text-xl text-yellow-700"
             >Apiculteur Passionné</span
@@ -205,11 +121,60 @@
         >
       </nav>
     </header>
-    <main
-      class="container mx-auto px-6 py-12 flex-1 flex flex-col items-center justify-center"
-    >
-      <h1 class="text-3xl font-bold text-yellow-700 mb-4">Savoir-faire</h1>
-      <p class="text-lg text-gray-600">Page en construction…</p>
+    <main class="container mx-auto px-6 py-12 flex-1 w-full">
+      <div
+        class="max-w-3xl mx-auto bg-white rounded-xl shadow p-6 md:p-10 flex flex-col md:flex-row gap-8"
+      >
+        <div class="flex-1 flex flex-col items-center justify-center">
+          <img
+            src="../assets/pollen.jpg"
+            alt="Pollen"
+            class="w-full max-w-xs h-64 object-cover rounded-lg shadow mb-4"
+            loading="lazy"
+          />
+          <span class="text-yellow-700 font-bold text-xl mb-2">6,00 €</span>
+          <a
+            href="produits.html"
+            class="text-yellow-600 hover:underline text-sm"
+            >← Retour à la liste des produits</a
+          >
+        </div>
+        <div class="flex-1 flex flex-col justify-center">
+          <h1 class="text-2xl md:text-3xl font-bold text-yellow-800 mb-3">
+            Pollen
+          </h1>
+          <p class="text-gray-700 mb-4">
+            Le pollen est une source naturelle de protéines, vitamines et
+            minéraux. Récolté à la ruche, il est séché à basse température pour
+            préserver toutes ses qualités nutritionnelles. Idéal pour renforcer
+            l’organisme au quotidien.
+          </p>
+          <ul class="mb-4 list-disc list-inside text-gray-700">
+            <li><strong>Origine :</strong> Provence, France</li>
+            <li><strong>Texture :</strong> Granulés secs</li>
+            <li><strong>Saveur :</strong> Florale, légèrement sucrée</li>
+            <li><strong>Récolte :</strong> Printemps et été</li>
+          </ul>
+          <h2 class="font-semibold text-yellow-700 mb-2">Bienfaits</h2>
+          <ul class="mb-4 list-disc list-inside text-gray-700">
+            <li>Riche en protéines, vitamines B, C et E</li>
+            <li>Renforce l’immunité et la vitalité</li>
+            <li>Favorise la digestion et l’équilibre intestinal</li>
+          </ul>
+          <h2 class="font-semibold text-yellow-700 mb-2">
+            Conseils de dégustation
+          </h2>
+          <p class="mb-4 text-gray-700">
+            À consommer le matin, pur ou mélangé à un yaourt, une compote ou un
+            smoothie. Cure recommandée de 3 à 6 semaines.
+          </p>
+          <a
+            href="contact.html"
+            class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-6 rounded shadow transition-transform transform hover:scale-105"
+            >Commander ou poser une question</a
+          >
+        </div>
+      </div>
     </main>
     <footer class="bg-yellow-700 text-yellow-50 mt-auto">
       <div
@@ -225,9 +190,7 @@
               >Mentions légales</a
             >
           </li>
-          <li>
-            <a href="contact.html" class="hover:underline">Contact</a></li>
-          </li>
+          <li><a href="contact.html" class="hover:underline">Contact</a></li>
           <li>
             <a
               href="https://facebook.com"

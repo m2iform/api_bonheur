@@ -8,7 +8,7 @@
     <script defer src="../dist/main.js"></script>
   </head>
   <body class="bg-white text-gray-800 min-h-screen flex flex-col font-sans">
-    <!-- Header & Navigation (copié depuis index.html) -->
+    <!-- Header & Navigation (identique aux autres pages) -->
     <header
       class="bg-white/95 shadow-sm sticky top-0 z-50 border-b border-yellow-100"
     >
@@ -109,32 +109,12 @@
           >
         </a>
         <ul class="hidden md:flex gap-6 text-lg">
-          <li><a href="/index.html" class="nav-link">Accueil</a></li>
-          <li>
-            <a href="/api_bonheur/pages/produits.html" class="nav-link"
-              >Produits</a
-            >
-          </li>
-          <li>
-            <a href="/api_bonheur/pages/apiculteur.html" class="nav-link"
-              >L'Apiculteur</a
-            >
-          </li>
-          <li>
-            <a href="/api_bonheur/pages/savoir-faire.html" class="nav-link"
-              >Savoir-faire</a
-            >
-          </li>
-          <li>
-            <a href="/api_bonheur/pages/actualites.html" class="nav-link"
-              >Actualités</a
-            >
-          </li>
-          <li>
-            <a href="/api_bonheur/pages/contact.html" class="nav-link"
-              >Contact</a
-            >
-          </li>
+          <li><a href="../index.html" class="nav-link">Accueil</a></li>
+          <li><a href="produits.html" class="nav-link">Produits</a></li>
+          <li><a href="apiculteur.html" class="nav-link">L'Apiculteur</a></li>
+          <li><a href="savoir-faire.html" class="nav-link">Savoir-faire</a></li>
+          <li><a href="actualites.html" class="nav-link">Actualités</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
         <button
           id="burgerBtn"
@@ -188,48 +168,268 @@
           </svg>
         </button>
         <a
-          href="/index.html"
+          href="../index.html"
           class="nav-link mobile-link focus-visible:ring-2 focus-visible:ring-yellow-400 active:scale-95 transition-transform cursor-pointer"
           aria-label="Accueil"
           >Accueil</a
         >
         <a
-          href="/api_bonheur/pages/produits.html"
+          href="produits.html"
           class="nav-link mobile-link focus-visible:ring-2 focus-visible:ring-yellow-400 active:scale-95 transition-transform cursor-pointer"
           aria-label="Produits"
           >Produits</a
         >
         <a
-          href="/api_bonheur/pages/apiculteur.html"
+          href="apiculteur.html"
           class="nav-link mobile-link focus-visible:ring-2 focus-visible:ring-yellow-400 active:scale-95 transition-transform cursor-pointer"
           aria-label="L'Apiculteur"
           >L'Apiculteur</a
         >
         <a
-          href="/api_bonheur/pages/savoir-faire.html"
+          href="savoir-faire.html"
           class="nav-link mobile-link focus-visible:ring-2 focus-visible:ring-yellow-400 active:scale-95 transition-transform cursor-pointer"
           aria-label="Savoir-faire"
           >Savoir-faire</a
         >
         <a
-          href="/api_bonheur/pages/actualites.html"
+          href="actualites.html"
           class="nav-link mobile-link focus-visible:ring-2 focus-visible:ring-yellow-400 active:scale-95 transition-transform cursor-pointer"
           aria-label="Actualités"
           >Actualités</a
         >
         <a
-          href="/api_bonheur/pages/contact.html"
+          href="contact.html"
           class="nav-link mobile-link focus-visible:ring-2 focus-visible:ring-yellow-400 active:scale-95 transition-transform cursor-pointer"
           aria-label="Contact"
           >Contact</a
         >
       </nav>
     </header>
-    <main
-      class="container mx-auto px-6 py-12 flex-1 flex flex-col items-center justify-center"
-    >
-      <h1 class="text-3xl font-bold text-yellow-700 mb-4">Produits</h1>
-      <p class="text-lg text-gray-600">Page en construction…</p>
+    <main class="container mx-auto px-6 py-12 flex-1 w-full">
+      <h1
+        class="text-3xl md:text-4xl font-bold text-yellow-700 mb-8 text-center"
+      >
+        Nos produits de la ruche
+      </h1>
+      <section class="mb-10">
+        <p class="text-lg text-gray-700 text-center max-w-2xl mx-auto mb-6">
+          Découvrez notre sélection de miels artisanaux, pollen, gelée royale,
+          cire et autres produits naturels issus de notre exploitation apicole
+          familiale en Provence.
+        </p>
+      </section>
+      <section
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-12"
+      >
+        <!-- Miel d'acacia -->
+        <div
+          class="bg-yellow-50 rounded-xl shadow-md p-5 flex flex-col items-center border border-yellow-100"
+        >
+          <img
+            src="../assets/miel-acacia.jpg"
+            alt="Miel d'acacia"
+            class="w-full h-44 object-cover rounded-lg mb-4"
+            loading="lazy"
+          />
+          <h2 class="font-bold text-lg text-yellow-800 mb-1">Miel d'acacia</h2>
+          <span class="text-yellow-700 font-semibold mb-2">8,50 €</span>
+          <span
+            class="inline-block bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full mb-2"
+            >Bio</span
+          >
+          <p class="text-gray-600 text-sm mb-3 text-center">
+            Un miel doux, clair et délicat, idéal pour les enfants et les
+            gourmets.
+          </p>
+          <a
+            href="produit-acacia.html"
+            class="text-yellow-600 hover:underline font-semibold"
+            >Voir le produit</a
+          >
+        </div>
+        <!-- Miel de lavande -->
+        <div
+          class="bg-yellow-50 rounded-xl shadow-md p-5 flex flex-col items-center border border-yellow-100"
+        >
+          <img
+            src="../assets/miel-lavande.jpg"
+            alt="Miel de lavande"
+            class="w-full h-44 object-cover rounded-lg mb-4"
+            loading="lazy"
+          />
+          <h2 class="font-bold text-lg text-yellow-800 mb-1">
+            Miel de lavande
+          </h2>
+          <span class="text-yellow-700 font-semibold mb-2">9,00 €</span>
+          <span
+            class="inline-block bg-yellow-200 text-yellow-800 text-xs px-2 py-1 rounded-full mb-2"
+            >Nouveauté</span
+          >
+          <p class="text-gray-600 text-sm mb-3 text-center">
+            Un miel parfumé, typique de la Provence, à la saveur florale et
+            fruitée.
+          </p>
+          <a
+            href="produit-lavande.html"
+            class="text-yellow-600 hover:underline font-semibold"
+            >Voir le produit</a
+          >
+        </div>
+        <!-- Miel de châtaignier -->
+        <div
+          class="bg-yellow-50 rounded-xl shadow-md p-5 flex flex-col items-center border border-yellow-100"
+        >
+          <img
+            src="../assets/miel-chataignier.jpg"
+            alt="Miel de châtaignier"
+            class="w-full h-44 object-cover rounded-lg mb-4"
+            loading="lazy"
+          />
+          <h2 class="font-bold text-lg text-yellow-800 mb-1">
+            Miel de châtaignier
+          </h2>
+          <span class="text-yellow-700 font-semibold mb-2">8,00 €</span>
+          <p class="text-gray-600 text-sm mb-3 text-center">
+            Un miel corsé, long en bouche, apprécié des amateurs de saveurs
+            puissantes.
+          </p>
+          <a
+            href="produit-chataignier.html"
+            class="text-yellow-600 hover:underline font-semibold"
+            >Voir le produit</a
+          >
+        </div>
+        <!-- Miel de tilleul -->
+        <div
+          class="bg-yellow-50 rounded-xl shadow-md p-5 flex flex-col items-center border border-yellow-100"
+        >
+          <img
+            src="../assets/miel-tilleul.jpg"
+            alt="Miel de tilleul"
+            class="w-full h-44 object-cover rounded-lg mb-4"
+            loading="lazy"
+          />
+          <h2 class="font-bold text-lg text-yellow-800 mb-1">
+            Miel de tilleul
+          </h2>
+          <span class="text-yellow-700 font-semibold mb-2">8,00 €</span>
+          <p class="text-gray-600 text-sm mb-3 text-center">
+            Un miel frais, légèrement mentholé, parfait pour les infusions et
+            les desserts.
+          </p>
+          <a
+            href="produit-tilleul.html"
+            class="text-yellow-600 hover:underline font-semibold"
+            >Voir le produit</a
+          >
+        </div>
+        <!-- Pollen -->
+        <div
+          class="bg-yellow-50 rounded-xl shadow-md p-5 flex flex-col items-center border border-yellow-100"
+        >
+          <img
+            src="../assets/pollen.jpg"
+            alt="Pollen"
+            class="w-full h-44 object-cover rounded-lg mb-4"
+            loading="lazy"
+          />
+          <h2 class="font-bold text-lg text-yellow-800 mb-1">Pollen</h2>
+          <span class="text-yellow-700 font-semibold mb-2">6,00 €</span>
+          <p class="text-gray-600 text-sm mb-3 text-center">
+            Riche en protéines et en vitamines, idéal pour renforcer l’organisme
+            au quotidien.
+          </p>
+          <a
+            href="produit-pollen.html"
+            class="text-yellow-600 hover:underline font-semibold"
+            >Voir le produit</a
+          >
+        </div>
+        <!-- Gelée royale -->
+        <div
+          class="bg-yellow-50 rounded-xl shadow-md p-5 flex flex-col items-center border border-yellow-100"
+        >
+          <img
+            src="../assets/gelee-royale.jpg"
+            alt="Gelée royale"
+            class="w-full h-44 object-cover rounded-lg mb-4"
+            loading="lazy"
+          />
+          <h2 class="font-bold text-lg text-yellow-800 mb-1">Gelée royale</h2>
+          <span class="text-yellow-700 font-semibold mb-2">18,00 €</span>
+          <p class="text-gray-600 text-sm mb-3 text-center">
+            Un concentré naturel d’énergie, reconnu pour ses bienfaits sur la
+            vitalité et l’immunité.
+          </p>
+          <a
+            href="produit-gelee-royale.html"
+            class="text-yellow-600 hover:underline font-semibold"
+            >Voir le produit</a
+          >
+        </div>
+        <!-- Cire d'abeille -->
+        <div
+          class="bg-yellow-50 rounded-xl shadow-md p-5 flex flex-col items-center border border-yellow-100"
+        >
+          <img
+            src="../assets/cire.jpg"
+            alt="Cire d'abeille"
+            class="w-full h-44 object-cover rounded-lg mb-4"
+            loading="lazy"
+          />
+          <h2 class="font-bold text-lg text-yellow-800 mb-1">Cire d'abeille</h2>
+          <span class="text-yellow-700 font-semibold mb-2">4,00 €</span>
+          <p class="text-gray-600 text-sm mb-3 text-center">
+            Naturelle et pure, idéale pour la fabrication de bougies,
+            cosmétiques ou l’entretien du bois.
+          </p>
+          <a href="produit-cire.html" class="text-yellow-600 hover:underline font-semibold"
+            >Voir le produit</a
+          >
+        </div>
+        <!-- Bougies en cire d'abeille -->
+        <div
+          class="bg-yellow-50 rounded-xl shadow-md p-5 flex flex-col items-center border border-yellow-100"
+        >
+          <img
+            src="../assets/bougie.jpg"
+            alt="Bougies en cire d'abeille"
+            class="w-full h-44 object-cover rounded-lg mb-4"
+            loading="lazy"
+          />
+          <h2 class="font-bold text-lg text-yellow-800 mb-1">
+            Bougies en cire d'abeille
+          </h2>
+          <span class="text-yellow-700 font-semibold mb-2"
+            >À partir de 3,00 €</span
+          >
+          <p class="text-gray-600 text-sm mb-3 text-center">
+            Bougies artisanales, 100% cire d’abeille, pour une ambiance
+            chaleureuse et naturelle.
+          </p>
+          <a
+            href="produit-bougie.html"
+            class="text-yellow-600 hover:underline font-semibold"
+            >Voir le produit</a
+          >
+        </div>
+      </section>
+      <section class="max-w-2xl mx-auto mb-12">
+        <h2 class="text-2xl font-bold text-yellow-700 mb-4">
+          Commander ou en savoir plus
+        </h2>
+        <p class="text-gray-700 mb-4">
+          Pour toute commande, question ou demande de conseil, contactez-nous
+          via la page
+          <a href="contact.html" class="text-yellow-700 underline">Contact</a>
+          ou rendez-nous visite à la ferme !
+        </p>
+        <a
+          href="contact.html"
+          class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded shadow-lg transition-transform transform hover:scale-105"
+          >Nous contacter</a
+        >
+      </section>
     </main>
     <footer class="bg-yellow-700 text-yellow-50 mt-auto">
       <div
@@ -241,17 +441,11 @@
         </div>
         <ul class="flex gap-4 text-sm">
           <li>
-            <a
-              href="/api_bonheur/pages/mentions-legales.html"
-              class="hover:underline"
+            <a href="mentions-legales.html" class="hover:underline"
               >Mentions légales</a
             >
           </li>
-          <li>
-            <a href="/api_bonheur/pages/contact.html" class="hover:underline"
-              >Contact</a
-            >
-          </li>
+          <li><a href="contact.html" class="hover:underline">Contact</a></li>
           <li>
             <a
               href="https://facebook.com"
@@ -272,4 +466,6 @@
       </div>
     </footer>
   </body>
+</html>
+
 </html>

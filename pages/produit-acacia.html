@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Savoir-faire | Apiculteur Passionné</title>
+    <title>Miel d'acacia | Apiculteur Passionné</title>
     <link href="../dist/output.css" rel="stylesheet" />
     <script defer src="../dist/main.js"></script>
   </head>
   <body class="bg-white text-gray-800 min-h-screen flex flex-col font-sans">
-    <!-- Header & Navigation (copié depuis index.html) -->
+    <!-- Header identique -->
     <header
       class="bg-white/95 shadow-sm sticky top-0 z-50 border-b border-yellow-100"
     >
@@ -205,11 +205,66 @@
         >
       </nav>
     </header>
-    <main
-      class="container mx-auto px-6 py-12 flex-1 flex flex-col items-center justify-center"
-    >
-      <h1 class="text-3xl font-bold text-yellow-700 mb-4">Savoir-faire</h1>
-      <p class="text-lg text-gray-600">Page en construction…</p>
+    <main class="container mx-auto px-6 py-12 flex-1 w-full">
+      <div
+        class="max-w-3xl mx-auto bg-white rounded-xl shadow p-6 md:p-10 flex flex-col md:flex-row gap-8"
+      >
+        <div class="flex-1 flex flex-col items-center justify-center">
+          <img
+            src="../assets/miel-acacia.jpg"
+            alt="Miel d'acacia"
+            class="w-full max-w-xs h-64 object-cover rounded-lg shadow mb-4"
+            loading="lazy"
+          />
+          <span
+            class="inline-block bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full mb-2"
+            >Bio</span
+          >
+          <span class="text-yellow-700 font-bold text-xl mb-2">8,50 €</span>
+          <a
+            href="produits.html"
+            class="text-yellow-600 hover:underline text-sm"
+            >← Retour à la liste des produits</a
+          >
+        </div>
+        <div class="flex-1 flex flex-col justify-center">
+          <h1 class="text-2xl md:text-3xl font-bold text-yellow-800 mb-3">
+            Miel d'acacia
+          </h1>
+          <p class="text-gray-700 mb-4">
+            Notre miel d’acacia est récolté au printemps dans les forêts de la
+            région, lorsque les acacias sont en pleine floraison. Sa couleur
+            très claire, sa texture liquide et son goût doux et subtil en font
+            un miel très apprécié des enfants et des gourmets.
+          </p>
+          <ul class="mb-4 list-disc list-inside text-gray-700">
+            <li><strong>Origine :</strong> Provence, France</li>
+            <li><strong>Texture :</strong> Liquide, très claire</li>
+            <li><strong>Saveur :</strong> Douce, florale, sans amertume</li>
+            <li><strong>Récolte :</strong> Printemps</li>
+            <li><strong>Label :</strong> Agriculture Biologique</li>
+          </ul>
+          <h2 class="font-semibold text-yellow-700 mb-2">Bienfaits</h2>
+          <ul class="mb-4 list-disc list-inside text-gray-700">
+            <li>Idéal pour sucrer les boissons chaudes ou les yaourts</li>
+            <li>Convient aux jeunes enfants (hors nourrissons &lt; 1 an)</li>
+            <li>Reconnu pour ses vertus adoucissantes et digestives</li>
+          </ul>
+          <h2 class="font-semibold text-yellow-700 mb-2">
+            Conseils de dégustation
+          </h2>
+          <p class="mb-4 text-gray-700">
+            À déguster sur une tartine, dans un fromage blanc, ou pour sucrer
+            naturellement vos boissons. Il se marie aussi très bien avec les
+            fruits frais.
+          </p>
+          <a
+            href="contact.html"
+            class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-6 rounded shadow transition-transform transform hover:scale-105"
+            >Commander ou poser une question</a
+          >
+        </div>
+      </div>
     </main>
     <footer class="bg-yellow-700 text-yellow-50 mt-auto">
       <div
@@ -225,9 +280,7 @@
               >Mentions légales</a
             >
           </li>
-          <li>
-            <a href="contact.html" class="hover:underline">Contact</a></li>
-          </li>
+          <li><a href="contact.html" class="hover:underline">Contact</a></li>
           <li>
             <a
               href="https://facebook.com"
