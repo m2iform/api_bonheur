@@ -6,6 +6,7 @@
     <title>L'Apiculteur | Apiculteur Passionné</title>
     <link href="../dist/output.css" rel="stylesheet" />
     <script defer src="../dist/main.js"></script>
+    <!-- Swiper CSS removed for simplicity -->
   </head>
   <body class="bg-white text-gray-800 min-h-screen flex flex-col font-sans">
     <!-- Header & Navigation (copié depuis index.html) -->
@@ -23,7 +24,9 @@
         <ul class="hidden md:flex gap-6 text-lg">
           <li><a href="../index.html" class="nav-link">Accueil</a></li>
           <li><a href="produits.html" class="nav-link">Produits</a></li>
-          <li><a href="apiculteur.html" class="nav-link">L'Apiculteur</a></li>
+          <li>
+            <a href="apiculteur.html" class="nav-link active">L'Apiculteur</a>
+          </li>
           <li><a href="savoir-faire.html" class="nav-link">Savoir-faire</a></li>
           <li><a href="actualites.html" class="nav-link">Actualités</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
@@ -117,11 +120,164 @@
         >
       </nav>
     </header>
-    <main
-      class="container mx-auto px-6 py-12 flex-1 flex flex-col items-center justify-center"
-    >
-      <h1 class="text-3xl font-bold text-yellow-700 mb-4">L'Apiculteur</h1>
-      <p class="text-lg text-gray-600">Page en construction…</p>
+    <main class="bg-yellow-50/50 flex-1">
+      <!-- Section Héros -->
+      <section class="bg-yellow-100/80 py-16 md:py-24">
+        <div class="container mx-auto px-4 text-center">
+          <h1
+            class="text-4xl md:text-5xl font-bold text-yellow-800 mb-4"
+          >
+            L'Art de l'Apiculture
+          </h1>
+          <p class="mt-4 text-lg md:text-xl text-yellow-700 max-w-3xl mx-auto">
+            Découvrez le quotidien d'un gardien des abeilles, un métier de
+            passion au service de la nature et de la biodiversité.
+          </p>
+        </div>
+      </section>
+
+      <div class="container mx-auto px-4 py-16 md:py-24 space-y-20">
+        <!-- Introduction: Rôle essentiel -->
+        <section class="grid md:grid-cols-5 gap-12 items-center max-w-7xl mx-auto">
+          <div class="md:col-span-2">
+             <img src="../assets/apiculteur.jpg" alt="Apiculteur souriant tenant un cadre de ruche" class="rounded-xl shadow-xl w-full h-full object-cover transform transition-transform duration-500 hover:scale-105" loading="lazy">
+          </div>
+          <div class="md:col-span-3 prose prose-lg text-gray-700 leading-relaxed">
+            <h2 class="text-3xl font-bold text-yellow-800 mb-6">
+              Un Partenaire Essentiel de la Nature
+            </h2>
+            <p>
+              L'apiculteur est bien plus qu'un simple producteur de miel. C'est
+              un <strong>artisan passionné</strong>, un observateur attentif et
+              un acteur essentiel de la biodiversité. Son rôle est d'assurer la
+              bonne santé des colonies d'abeilles, qui sont vitales pour la
+              pollinisation des plantes et l'équilibre de nos écosystèmes.
+            </p>
+             <p>
+              Ce partenariat unique entre l'homme et l'abeille est la clé pour
+              obtenir des produits d'une qualité exceptionnelle tout en soutenant
+              l'agriculture locale.
+            </p>
+          </div>
+        </section>
+
+        <!-- Les Saisons de l'Apiculteur -->
+        <section>
+          <h2 class="text-3xl font-bold text-yellow-800 text-center mb-12">
+            Le Calendrier de l'Apiculteur
+          </h2>
+          <div class="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
+            <div class="bg-white p-8 rounded-xl shadow-md border-l-4 border-green-500">
+              <h3 class="text-2xl font-semibold text-green-800 mb-3">
+                Printemps : Le Réveil
+              </h3>
+              <p class="text-gray-600 mb-4">
+                La colonie se réveille. L'apiculteur accompagne la croissance de
+                la population et veille à sa bonne santé.
+              </p>
+              <ul class="space-y-2 text-gray-600 list-disc list-inside">
+                <li>Inspection des colonies</li>
+                <li>Ajout de hausses</li>
+                <li>Gestion de l'essaimage</li>
+              </ul>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl shadow-md border-l-4 border-yellow-500">
+              <h3 class="text-2xl font-semibold text-yellow-800 mb-3">
+                Été : La Récolte
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Pleine saison de la miellée. Le rôle de l'apiculteur est de
+                surveiller et de récolter au moment optimal.
+              </p>
+              <ul class="space-y-2 text-gray-600 list-disc list-inside">
+                <li>Surveillance des miellées</li>
+                <li>Récolte du miel</li>
+                <li>Extraction et mise en pots</li>
+              </ul>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl shadow-md border-l-4 border-orange-500">
+              <h3 class="text-2xl font-semibold text-orange-800 mb-3">
+                Automne : La Préparation
+              </h3>
+              <p class="text-gray-600 mb-4">
+                La colonie se prépare pour l'hiver. L'apiculteur s'assure que
+                les abeilles sont en bonne santé et ont assez de réserves.
+              </p>
+              <ul class="space-y-2 text-gray-600 list-disc list-inside">
+                <li>Bilan de santé complet</li>
+                <li>Mise en hivernage</li>
+                <li>Vérification des réserves</li>
+              </ul>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl shadow-md border-l-4 border-blue-500">
+              <h3 class="text-2xl font-semibold text-blue-800 mb-3">
+                Hiver : Le Repos
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Période de calme. L'apiculteur en profite pour entretenir son
+                matériel, se former et planifier la saison à venir.
+              </p>
+              <ul class="space-y-2 text-gray-600 list-disc list-inside">
+                <li>Entretien du matériel</li>
+                <li>Planification de la saison</li>
+                <li>Formation continue</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Qualités requises -->
+        <section>
+          <h2 class="text-3xl font-bold text-yellow-800 text-center mb-12">
+            Les 5 Qualités de l'Apiculteur
+          </h2>
+          <div
+            class="flex flex-row gap-6 pb-6 overflow-x-auto"
+          >
+            <div class="flex-shrink-0 w-64 bg-white rounded-xl shadow-lg p-6 text-center flex flex-col items-center justify-start transition-transform transform hover:-translate-y-2">
+              <div class="bg-yellow-100 rounded-full p-4 mb-4 inline-block">
+                  <svg class="w-10 h-10 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+              </div>
+              <h3 class="font-semibold text-lg text-gray-800">
+                Patience & Calme
+              </h3>
+            </div>
+            <div class="flex-shrink-0 w-64 bg-white rounded-xl shadow-lg p-6 text-center flex flex-col items-center justify-start transition-transform transform hover:-translate-y-2">
+              <div class="bg-yellow-100 rounded-full p-4 mb-4 inline-block">
+                <svg class="w-10 h-10 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+              </div>
+              <h3 class="font-semibold text-lg text-gray-800">
+                Sens de l'Observation
+              </h3>
+            </div>
+            <div class="flex-shrink-0 w-64 bg-white rounded-xl shadow-lg p-6 text-center flex flex-col items-center justify-start transition-transform transform hover:-translate-y-2">
+              <div class="bg-yellow-100 rounded-full p-4 mb-4 inline-block">
+                  <svg class="w-10 h-10 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+              </div>
+              <h3 class="font-semibold text-lg text-gray-800">Rigueur</h3>
+            </div>
+            <div class="flex-shrink-0 w-64 bg-white rounded-xl shadow-lg p-6 text-center flex flex-col items-center justify-start transition-transform transform hover:-translate-y-2">
+              <div class="bg-yellow-100 rounded-full p-4 mb-4 inline-block">
+                <svg class="w-10 h-10 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 002-2v-1a2 2 0 012-2h1.945M12 11v9.25m0 0l-2.75-2.75M12 20.25l2.75-2.75" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              </div>
+              <h3 class="font-semibold text-lg text-gray-800">
+                Force Physique
+              </h3>
+            </div>
+            <div class="flex-shrink-0 w-64 bg-white rounded-xl shadow-lg p-6 text-center flex flex-col items-center justify-start transition-transform transform hover:-translate-y-2">
+              <div class="bg-yellow-100 rounded-full p-4 mb-4 inline-block">
+                <svg class="w-10 h-10 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+              </div>
+              <h3 class="font-semibold text-lg text-gray-800">
+                Passion Naturelle
+              </h3>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
     <footer class="bg-yellow-700 text-yellow-50 mt-auto">
       <div
@@ -138,7 +294,7 @@
             >
           </li>
           <li>
-            <a href="contact.html" class="hover:underline">Contact</a></li>
+            <a href="contact.html" class="hover:underline">Contact</a>
           </li>
           <li>
             <a
@@ -159,5 +315,6 @@
         </ul>
       </div>
     </footer>
+    <!-- Swiper JS removed -->
   </body>
 </html>
