@@ -319,7 +319,7 @@
     </section>
     <!-- Présentation rapide de l'apiculteur -->
     <section
-      class="container mx-auto px-6 py-12 flex flex-col md:flex-row items-center gap-8 fade-section"
+      class="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-8 fade-section"
     >
       <div class="flex-shrink-0">
         <img
@@ -352,23 +352,18 @@
       </div>
     </section>
     <!-- Sélection de produits phares -->
-    <section class="bg-white py-12 fade-section">
+    <section class="bg-yellow-50/50 py-16 fade-section">
       <div class="container mx-auto px-4 sm:px-6">
-        <h2
-          class="text-2xl font-bold text-yellow-700 mb-6 flex items-center gap-2 justify-center md:justify-start"
-        >
-          Nos produits phares
-          <span
-            class="inline-block bg-yellow-200 text-yellow-800 text-xs px-2 py-1 rounded-full"
-            >Nouveautés</span
-          >
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold text-yellow-800 mb-4">Nos produits phares</h2>
+          <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">Une sélection de nos miels et trésors de la ruche les plus appréciés.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div
-            class="bg-yellow-50 rounded-2xl md:rounded-xl p-0 shadow-md md:shadow-lg relative group transition flex flex-col overflow-hidden border border-yellow-100 hover:scale-105 hover:shadow-xl duration-300"
+            class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden group"
           >
             <span
-              class="absolute top-3 right-3 bg-green-500 text-white text-xs px-2 py-1 rounded-full shadow z-10"
+              class="absolute top-4 right-4 bg-green-500 text-white text-xs px-2 py-1 rounded-full shadow z-10"
               >Bio</span
             >
             <div
@@ -396,10 +391,10 @@
             </div>
           </div>
           <div
-            class="bg-yellow-50 rounded-2xl md:rounded-xl p-0 shadow-md md:shadow-lg relative group transition flex flex-col overflow-hidden border border-yellow-100 hover:scale-105 hover:shadow-xl duration-300"
+            class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden group"
           >
             <span
-              class="absolute top-3 right-3 bg-yellow-500 text-white text-xs px-2 py-1 rounded-full shadow z-10"
+              class="absolute top-4 right-4 bg-yellow-500 text-white text-xs px-2 py-1 rounded-full shadow z-10"
               >Nouveauté</span
             >
             <div
@@ -427,7 +422,7 @@
             </div>
           </div>
           <div
-            class="bg-yellow-50 rounded-2xl md:rounded-xl p-0 shadow-md md:shadow-lg relative group transition flex flex-col overflow-hidden border border-yellow-100 hover:scale-105 hover:shadow-xl duration-300"
+            class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden group"
           >
             <div
               class="w-full h-48 md:h-56 bg-yellow-100 flex items-center justify-center rounded-t-2xl md:rounded-t-xl overflow-hidden"
@@ -454,85 +449,129 @@
         </div>
       </div>
     </section>
+    <!-- Dernières actualités -->
+    <section class="py-16 fade-section">
+      <div class="container mx-auto px-4 sm:px-6">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold text-yellow-800 mb-4">Dernières actualités de la ruche</h2>
+          <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">Suivez la vie de notre rucher, découvrez nos conseils et ne manquez aucun événement.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Article 1 -->
+          <a href="./pages/actualite-recolte-printemps.html" class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden group">
+            <div class="overflow-hidden">
+              <img src="./assets/recolte-miel.jpg" alt="Récolte du miel de printemps" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <p class="text-sm text-gray-500 mb-2">15 Mai 2024</p>
+              <h3 class="text-xl font-bold text-yellow-800 mb-3 flex-grow">La récolte de printemps est là !</h3>
+              <p class="text-gray-600 mb-4">Nos abeilles ont bien travaillé ! Découvrez les saveurs uniques de nos premiers miels de la saison...</p>
+              <span class="font-semibold text-yellow-600 group-hover:underline">Lire la suite →</span>
+            </div>
+          </a>
+          <!-- Article 2 -->
+          <a href="./pages/actualite-proteger-abeilles.html" class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden group">
+            <div class="overflow-hidden">
+              <img src="./assets/entretien-abeilles.jpg" alt="Une abeille sur une fleur" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <p class="text-sm text-gray-500 mb-2">10 Mai 2024</p>
+              <h3 class="text-xl font-bold text-yellow-800 mb-3 flex-grow">Comment protéger les abeilles ?</h3>
+              <p class="text-gray-600 mb-4">Quelques gestes simples à adopter dans votre jardin pour aider ces précieuses pollinisatrices...</p>
+              <span class="font-semibold text-yellow-600 group-hover:underline">Lire la suite →</span>
+            </div>
+          </a>
+          <!-- Article 3 -->
+          <a href="./pages/actualite-marche-dimanche.html" class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden group">
+            <div class="overflow-hidden">
+              <img src="./assets/marche-fermier.jpg" alt="Stand de marché avec des pots de miel" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <p class="text-sm text-gray-500 mb-2">05 Mai 2024</p>
+              <h3 class="text-xl font-bold text-yellow-800 mb-3 flex-grow">Retrouvez-nous au marché ce dimanche !</h3>
+              <p class="text-gray-600 mb-4">Nous serons présents au marché fermier de la ville pour une dégustation de nos nouveautés...</p>
+              <span class="font-semibold text-yellow-600 group-hover:underline">Lire la suite →</span>
+            </div>
+          </a>
+        </div>
+        <div class="text-center mt-12">
+          <a href="./pages/actualites.html" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">
+            Toutes nos actualités
+          </a>
+        </div>
+      </div>
+    </section>
     <!-- Témoignages clients -->
-    <section class="container mx-auto px-6 py-12 fade-section">
-      <h2
-        class="text-2xl font-bold text-yellow-700 mb-6 flex items-center gap-2 justify-center md:justify-start"
-      >
-        Ils nous font confiance
-        <svg
-          class="w-6 h-6 text-yellow-400"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-        >
-          <path
-            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"
-          />
-        </svg>
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div
-          class="bg-white rounded-lg p-6 shadow-md border border-yellow-100 flex flex-col items-center group hover:shadow-xl transition"
-        >
-          <img
-            src="./assets/client1.jpg"
-            alt="Photo de Marie L., une cliente satisfaite"
-            class="w-16 h-16 rounded-full object-cover mb-2 border-2 border-yellow-100 shadow"
-            loading="lazy"
-          />
-          <div class="flex items-center mb-2" role="img" aria-label="Note de 5 sur 5">
-            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
-            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
-            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
-            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
-            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
-          </div>
-          <p class="text-gray-700 mb-2 italic">
-            "Un miel exceptionnel, livraison rapide et soignée !"
-          </p>
-          <span class="text-sm text-gray-500">- Marie L.</span>
+    <section class="bg-yellow-50/50 py-16 fade-section">
+      <div class="container mx-auto px-6">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold text-yellow-800 mb-4">Ils nous font confiance</h2>
+          <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">La plus belle des récompenses, c'est votre satisfaction.</p>
         </div>
-        <div
-          class="bg-white rounded-lg p-6 shadow-md border border-yellow-100 flex flex-col items-center group hover:shadow-xl transition"
-        >
-          <img
-            src="./assets/client2.jpg"
-            alt="Photo de Paul G., un client satisfait"
-            class="w-16 h-16 rounded-full object-cover mb-2 border-2 border-yellow-100 shadow"
-            loading="lazy"
-          />
-          <div class="flex items-center mb-2" role="img" aria-label="Note de 5 sur 5">
-            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
-            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
-            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
-            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
-            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/50 flex flex-col items-center text-center group transition"
+          >
+            <img
+              src="./assets/client1.jpg"
+              alt="Photo de Marie L., une cliente satisfaite"
+              class="w-16 h-16 rounded-full object-cover mb-2 border-2 border-yellow-100 shadow"
+              loading="lazy"
+            />
+            <div class="flex items-center mb-2" role="img" aria-label="Note de 5 sur 5">
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+            </div>
+            <p class="text-gray-700 mb-2 italic flex-grow">
+              "Un miel exceptionnel, livraison rapide et soignée !"
+            </p>
+            <span class="text-sm text-gray-500 font-semibold">- Marie L.</span>
           </div>
-          <p class="text-gray-700 mb-2 italic">
-            "On sent la passion et la qualité dans chaque pot."
-          </p>
-          <span class="text-sm text-gray-500">- Paul G.</span>
-        </div>
-        <div
-          class="bg-white rounded-lg p-6 shadow-md border border-yellow-100 flex flex-col items-center group hover:shadow-xl transition"
-        >
-          <img
-            src="./assets/client3.jpg"
-            alt="Photo de Sophie R., une cliente satisfaite"
-            class="w-16 h-16 rounded-full object-cover mb-2 border-2 border-yellow-100 shadow"
-            loading="lazy"
-          />
-          <div class="flex items-center mb-2" role="img" aria-label="Note de 5 sur 5">
-            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
-            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
-            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
-            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
-            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+          <div
+            class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/50 flex flex-col items-center text-center group transition"
+          >
+            <img
+              src="./assets/client2.jpg"
+              alt="Photo de Paul G., un client satisfait"
+              class="w-16 h-16 rounded-full object-cover mb-2 border-2 border-yellow-100 shadow"
+              loading="lazy"
+            />
+            <div class="flex items-center mb-2" role="img" aria-label="Note de 5 sur 5">
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+            </div>
+            <p class="text-gray-700 mb-2 italic flex-grow">
+              "On sent la passion et la qualité dans chaque pot."
+            </p>
+            <span class="text-sm text-gray-500 font-semibold">- Paul G.</span>
           </div>
-          <p class="text-gray-700 mb-2 italic">
-            "Des produits variés et un accueil chaleureux à la ferme."
-          </p>
-          <span class="text-sm text-gray-500">- Sophie R.</span>
+          <div
+            class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/50 flex flex-col items-center text-center group transition"
+          >
+            <img
+              src="./assets/client3.jpg"
+              alt="Photo de Sophie R., une cliente satisfaite"
+              class="w-16 h-16 rounded-full object-cover mb-2 border-2 border-yellow-100 shadow"
+              loading="lazy"
+            />
+            <div class="flex items-center mb-2" role="img" aria-label="Note de 5 sur 5">
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+            </div>
+            <p class="text-gray-700 mb-2 italic flex-grow">
+              "Des produits variés et un accueil chaleureux à la ferme."
+            </p>
+            <span class="text-sm text-gray-500 font-semibold">- Sophie R.</span>
+          </div>
         </div>
       </div>
     </section>
@@ -657,6 +696,16 @@
     opacity: 0;
     pointer-events: none;
   }
+  .fade-section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .fade-section.visible {
+    opacity: 1;
+    transform: none;
+  }
   .mobile-link {
     width: 100%;
     text-align: center;
@@ -678,15 +727,5 @@
   #mobileMenu {
     opacity: 0;
     pointer-events: none;
-  }
-  .fade-section {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
-      transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .fade-section.visible {
-    opacity: 1;
-    transform: none;
   }
 </style>
