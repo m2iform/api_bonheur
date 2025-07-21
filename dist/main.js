@@ -1,23 +1,76 @@
 // Slider Hero
+const sliderContainer = document.querySelector('.slider');
 const sliderImgs = document.querySelectorAll('.slider-img');
 const prevBtn = document.querySelector('.slider-prev');
 const nextBtn = document.querySelector('.slider-next');
 let currentSlide = 0;
-if (sliderImgs.length) {
+let sliderInterval;
+
+if (sliderImgs.length && sliderContainer) {
   function showSlide(idx) {
     sliderImgs.forEach((img, i) => {
       img.style.opacity = i === idx ? '1' : '0';
     });
   }
-  prevBtn.addEventListener('click', () => {
-    currentSlide = (currentSlide - 1 + sliderImgs.length) % sliderImgs.length;
-    showSlide(currentSlide);
-  });
-  nextBtn.addEventListener('click', () => {
+
+  function nextSlide() {
     currentSlide = (currentSlide + 1) % sliderImgs.length;
     showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + sliderImgs.length) % sliderImgs.length;
+    showSlide(currentSlide);
+  }
+
+  prevBtn.addEventListener('click', () => {
+    prevSlide();
+    resetSliderInterval();
   });
+
+  nextBtn.addEventListener('click', () => {
+    nextSlide();
+    resetSliderInterval();
+  });
+
+  // Autoplay
+  function startSliderInterval() {
+    sliderInterval = setInterval(nextSlide, 7000);
+  }
+
+  function resetSliderInterval() {
+    clearInterval(sliderInterval);
+    startSliderInterval();
+  }
+
+  // Swipe functionality for mobile
+  let touchstartX = 0;
+  let touchendX = 0;
+
+  function handleSwipe() {
+    const threshold = 50; // Minimum distance for a swipe
+    if (touchendX < touchstartX - threshold) {
+      nextSlide();
+      resetSliderInterval();
+    }
+    if (touchendX > touchstartX + threshold) {
+      prevSlide();
+      resetSliderInterval();
+    }
+  }
+
+  sliderContainer.addEventListener('touchstart', e => {
+    touchstartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  sliderContainer.addEventListener('touchend', e => {
+    touchendX = e.changedTouches[0].screenX;
+    handleSwipe();
+  });
+
+  // Initialisation
   showSlide(currentSlide);
+  startSliderInterval();
 }
 // Bouton retour en haut
 const backToTop = document.getElementById('backToTop');

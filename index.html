@@ -10,6 +10,9 @@
     />
     <link href="dist/output.css" rel="stylesheet" />
     <script defer src="dist/main.js"></script>
+    <!-- <style>
+      .slider-img { opacity: 1 !important; }
+    </style> -->
   </head>
   <body class="bg-white text-gray-800 min-h-screen flex flex-col font-sans">
     <!-- Header & Navigation -->
@@ -21,103 +24,8 @@
         aria-label="Navigation principale"
       >
         <a href="index.html" class="flex items-center gap-2">
-          <span class="block h-10 w-10 animate-bee-float">
-            <svg
-              viewBox="0 0 64 64"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-10 w-10"
-            >
-              <!-- Corps de l'abeille -->
-              <ellipse
-                cx="32"
-                cy="38"
-                rx="14"
-                ry="18"
-                fill="#FDE68A"
-                stroke="#F59E42"
-                stroke-width="2"
-              />
-              <!-- Rayures -->
-              <rect x="24" y="28" width="16" height="4" rx="2" fill="#F59E42" />
-              <rect x="24" y="36" width="16" height="4" rx="2" fill="#F59E42" />
-              <rect x="24" y="44" width="16" height="4" rx="2" fill="#F59E42" />
-              <!-- Tête -->
-              <circle
-                cx="32"
-                cy="22"
-                r="8"
-                fill="#FDE68A"
-                stroke="#F59E42"
-                stroke-width="2"
-              />
-              <!-- Ailes animées -->
-              <g>
-                <ellipse
-                  id="wingL"
-                  cx="20"
-                  cy="18"
-                  rx="8"
-                  ry="16"
-                  fill="#fff"
-                  fill-opacity=".7"
-                >
-                  <animateTransform
-                    attributeName="transform"
-                    type="rotate"
-                    values="0 20 18;15 20 18;0 20 18"
-                    dur="1s"
-                    repeatCount="indefinite"
-                  />
-                </ellipse>
-                <ellipse
-                  id="wingR"
-                  cx="44"
-                  cy="18"
-                  rx="8"
-                  ry="16"
-                  fill="#fff"
-                  fill-opacity=".7"
-                >
-                  <animateTransform
-                    attributeName="transform"
-                    type="rotate"
-                    values="0 44 18;-15 44 18;0 44 18"
-                    dur="1s"
-                    repeatCount="indefinite"
-                  />
-                </ellipse>
-              </g>
-              <!-- Antennes -->
-              <path
-                d="M28 14 Q26 10 22 12"
-                stroke="#F59E42"
-                stroke-width="2"
-                fill="none"
-              />
-              <path
-                d="M36 14 Q38 10 42 12"
-                stroke="#F59E42"
-                stroke-width="2"
-                fill="none"
-              />
-              <!-- Yeux -->
-              <circle cx="29" cy="22" r="1.2" fill="#222" />
-              <circle cx="35" cy="22" r="1.2" fill="#222" />
-              <!-- Ombre -->
-              <ellipse
-                cx="32"
-                cy="60"
-                rx="10"
-                ry="2.5"
-                fill="#F59E42"
-                fill-opacity=".2"
-              />
-            </svg>
-          </span>
-          <span class="font-bold text-xl text-yellow-700"
-            >Apiculteur Passionné</span
-          >
+          <img src="assets/bee-logo.png" alt="Logo abeille" class="h-10 w-10" />
+          <span class="font-bold text-xl text-yellow-700">Apiculteur Passionné</span>
         </a>
         <!-- Menu desktop -->
         <ul class="hidden md:flex gap-6 text-lg">
@@ -331,17 +239,17 @@
       </nav>
     </div>
     <!-- Hero avec slider d'images et slogan -->
-    <section class="relative bg-green-50 py-10 overflow-hidden fade-section">
+    <section class="relative bg-yellow-50/50 py-10 overflow-hidden fade-section">
       <div class="absolute inset-0 pointer-events-none">
         <svg
-          class="absolute top-0 right-0 opacity-20 w-80 h-80"
+          class="absolute top-0 right-0 opacity-10 w-80 h-80"
           viewBox="0 0 200 200"
           fill="none"
         >
           <circle cx="100" cy="100" r="100" fill="#FDE68A" />
         </svg>
         <svg
-          class="absolute bottom-0 left-0 opacity-10 w-96 h-96"
+          class="absolute bottom-0 left-0 opacity-5 w-96 h-96"
           viewBox="0 0 200 200"
           fill="none"
         >
@@ -351,27 +259,27 @@
       <div
         class="container mx-auto flex flex-col md:flex-row items-center gap-8 px-6 relative z-10"
       >
-        <div class="flex-1">
+        <div class="flex-1 text-center md:text-left">
           <h1
-            class="text-4xl md:text-5xl font-extrabold text-yellow-700 mb-4 drop-shadow-lg"
+            class="text-4xl md:text-5xl font-extrabold text-yellow-800 mb-4 drop-shadow-lg"
           >
-            Le miel, notre passion<br /><span class="text-yellow-500"
-              >du rucher à votre table</span
+            Le miel, notre passion<br /><span class="text-yellow-600"
+              >du rucher à votre table.</span
             >
           </h1>
-          <p class="text-lg mb-6 text-yellow-900">
+          <p class="text-lg mb-6 text-yellow-900/80">
             Découvrez des produits authentiques, issus d'une apiculture
             respectueuse des abeilles et de la nature.
           </p>
           <a
             href="pages/produits.html"
-            class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded shadow-lg transition-transform transform hover:scale-105"
+            class="inline-block bg-gradient-to-br from-yellow-500 to-amber-500 hover:from-yellow-600 hover:to-amber-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105"
             >Voir nos miels</a
           >
         </div>
-        <div class="flex-1">
+        <div class="flex-1 w-full">
           <div
-            class="relative w-full h-64 md:h-80 rounded-lg overflow-hidden shadow-2xl group"
+            class="relative w-full h-64 sm:h-72 md:h-80 rounded-lg overflow-hidden shadow-2xl group"
           >
             <div class="slider h-full w-full">
               <img
@@ -394,14 +302,16 @@
               />
             </div>
             <button
-              class="slider-prev absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 shadow hover:bg-yellow-200 transition"
+              class="slider-prev absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 shadow-md transition"
             >
-              <span class="sr-only">Précédent</span>&lt;
+              <span class="sr-only">Précédent</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-800" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7" /></svg>
             </button>
             <button
-              class="slider-next absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 shadow hover:bg-yellow-200 transition"
+              class="slider-next absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 shadow-md transition"
             >
-              <span class="sr-only">Suivant</span>&gt;
+              <span class="sr-only">Suivant</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-800" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" /></svg>
             </button>
           </div>
         </div>
@@ -411,17 +321,17 @@
     <section
       class="container mx-auto px-6 py-12 flex flex-col md:flex-row items-center gap-8 fade-section"
     >
-      <div class="flex justify-center w-full md:w-auto">
+      <div class="flex-shrink-0">
         <img
           src="assets/apiculteur.jpg"
           alt="Portrait Apiculteur"
-          class="w-40 h-40 rounded-full border-4 border-yellow-400 shadow-lg object-cover mx-auto"
+          class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-yellow-400 shadow-lg object-cover mx-auto"
           loading="lazy"
         />
       </div>
-      <div>
+      <div class="text-center md:text-left">
         <h2
-          class="text-2xl font-bold text-yellow-700 mb-2 flex items-center gap-2"
+          class="text-2xl font-bold text-yellow-700 mb-2 flex items-center justify-center md:justify-start gap-2"
         >
           Jean Dupont, apiculteur passionné
           <span
@@ -443,9 +353,9 @@
     </section>
     <!-- Sélection de produits phares -->
     <section class="bg-white py-12 fade-section">
-      <div class="container mx-auto px-2 md:px-6">
+      <div class="container mx-auto px-4 sm:px-6">
         <h2
-          class="text-2xl font-bold text-yellow-700 mb-6 flex items-center gap-2"
+          class="text-2xl font-bold text-yellow-700 mb-6 flex items-center gap-2 justify-center md:justify-start"
         >
           Nos produits phares
           <span
@@ -455,7 +365,7 @@
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           <div
-            class="bg-yellow-50 rounded-2xl md:rounded-xl p-0 shadow-md md:shadow-lg relative group transition flex flex-col overflow-hidden border border-yellow-100 mx-1 md:mx-0 hover:scale-105 hover:shadow-2xl duration-300"
+            class="bg-yellow-50 rounded-2xl md:rounded-xl p-0 shadow-md md:shadow-lg relative group transition flex flex-col overflow-hidden border border-yellow-100 hover:scale-105 hover:shadow-2xl duration-300"
           >
             <span
               class="absolute top-3 right-3 bg-green-500 text-white text-xs px-2 py-1 rounded-full shadow z-10"
@@ -486,7 +396,7 @@
             </div>
           </div>
           <div
-            class="bg-yellow-50 rounded-2xl md:rounded-xl p-0 shadow-md md:shadow-lg relative group transition flex flex-col overflow-hidden border border-yellow-100 mx-1 md:mx-0 hover:scale-105 hover:shadow-2xl duration-300"
+            class="bg-yellow-50 rounded-2xl md:rounded-xl p-0 shadow-md md:shadow-lg relative group transition flex flex-col overflow-hidden border border-yellow-100 hover:scale-105 hover:shadow-2xl duration-300"
           >
             <span
               class="absolute top-3 right-3 bg-yellow-500 text-white text-xs px-2 py-1 rounded-full shadow z-10"
@@ -517,7 +427,7 @@
             </div>
           </div>
           <div
-            class="bg-yellow-50 rounded-2xl md:rounded-xl p-0 shadow-md md:shadow-lg relative group transition flex flex-col overflow-hidden border border-yellow-100 mx-1 md:mx-0 hover:scale-105 hover:shadow-2xl duration-300"
+            class="bg-yellow-50 rounded-2xl md:rounded-xl p-0 shadow-md md:shadow-lg relative group transition flex flex-col overflow-hidden border border-yellow-100 hover:scale-105 hover:shadow-2xl duration-300"
           >
             <div
               class="w-full h-48 md:h-56 bg-yellow-100 flex items-center justify-center rounded-t-2xl md:rounded-t-xl overflow-hidden"
@@ -547,7 +457,7 @@
     <!-- Témoignages clients -->
     <section class="container mx-auto px-6 py-12 fade-section">
       <h2
-        class="text-2xl font-bold text-yellow-700 mb-6 flex items-center gap-2"
+        class="text-2xl font-bold text-yellow-700 mb-6 flex items-center gap-2 justify-center md:justify-start"
       >
         Ils nous font confiance
         <svg
@@ -562,7 +472,7 @@
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div
-          class="bg-white rounded-lg p-6 shadow flex flex-col items-center group hover:shadow-xl transition"
+          class="bg-white rounded-lg p-6 shadow-sm border border-gray-100 flex flex-col items-center group hover:shadow-xl transition"
         >
           <img
             src="assets/client1.jpg"
@@ -579,7 +489,7 @@
           <span class="text-sm text-gray-500">- Marie L.</span>
         </div>
         <div
-          class="bg-white rounded-lg p-6 shadow flex flex-col items-center group hover:shadow-xl transition"
+          class="bg-white rounded-lg p-6 shadow-sm border border-gray-100 flex flex-col items-center group hover:shadow-xl transition"
         >
           <img
             src="assets/client2.jpg"
@@ -596,7 +506,7 @@
           <span class="text-sm text-gray-500">- Paul G.</span>
         </div>
         <div
-          class="bg-white rounded-lg p-6 shadow flex flex-col items-center group hover:shadow-xl transition"
+          class="bg-white rounded-lg p-6 shadow-sm border border-gray-100 flex flex-col items-center group hover:shadow-xl transition"
         >
           <img
             src="assets/client3.jpg"
