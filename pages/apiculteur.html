@@ -14,14 +14,14 @@
       class="bg-white/95 shadow-sm sticky top-0 z-50 border-b border-yellow-100"
     >
       <nav
-        class="container mx-auto flex items-center justify-between py-3 px-4 md:px-6"
+        class="container mx-auto flex items-center justify-between py-3 px-2 sm:px-4 md:px-6"
         aria-label="Navigation principale"
       >
-        <a href="../index.html" class="flex items-center gap-2">
-          <img src="../assets/bee-logo.png" alt="Logo abeille" class="h-10 w-10" />
-          <span class="font-bold text-xl text-yellow-700">Apiculteur Passionné</span>
+        <a href="../index.html" class="flex items-center gap-2 min-w-0">
+          <img src="../assets/bee-logo.png" alt="Logo abeille" class="h-10 w-10 min-w-10" />
+          <span class="font-bold text-lg xs:text-base sm:text-xl text-yellow-700 truncate">Apiculteur Passionné</span>
         </a>
-        <ul class="hidden md:flex gap-6 text-lg">
+        <ul class="hidden md:flex gap-4 lg:gap-6 text-base lg:text-lg">
           <li><a href="../index.html" class="nav-link">Accueil</a></li>
           <li><a href="produits.html" class="nav-link">Produits</a></li>
           <li>
@@ -56,7 +56,7 @@
       ></div>
       <nav
         id="mobileMenu"
-        class="md:hidden fixed top-0 right-0 h-full w-4/5 max-w-xs bg-white/95 rounded-l-3xl shadow-2xl z-50 flex flex-col items-center justify-center gap-8 text-xl font-semibold text-yellow-700 transition-all duration-300 ease-in-out opacity-0 translate-x-full focus:outline-none animate-none"
+        class="md:hidden fixed top-0 right-0 h-full w-4/5 max-w-xs bg-white/95 rounded-l-3xl shadow-2xl z-50 flex flex-col items-center justify-center gap-8 text-base sm:text-xl font-semibold text-yellow-700 transition-all duration-300 ease-in-out opacity-0 translate-x-full focus:outline-none animate-none"
         aria-label="Menu mobile"
       >
         <div class="flex flex-col items-center gap-2 mt-8 mb-4 select-none">
@@ -122,28 +122,28 @@
     </header>
     <main class="bg-yellow-50/50 flex-1">
       <!-- Section Héros -->
-      <section class="bg-yellow-100/80 py-16 md:py-24">
-        <div class="container mx-auto px-4 text-center">
+      <section class="bg-yellow-100/80 py-10 sm:py-14 md:py-20 lg:py-24">
+        <div class="container mx-auto px-2 sm:px-4 text-center">
           <h1
-            class="text-4xl md:text-5xl font-bold text-yellow-800 mb-4"
+            class="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold text-yellow-800 mb-4"
           >
             L'Art de l'Apiculture
           </h1>
-          <p class="mt-4 text-lg md:text-xl text-yellow-700 max-w-3xl mx-auto">
+          <p class="mt-4 text-base xs:text-lg md:text-xl text-yellow-700 max-w-3xl mx-auto">
             Découvrez le quotidien d'un gardien des abeilles, un métier de
             passion au service de la nature et de la biodiversité.
           </p>
         </div>
       </section>
 
-      <div class="container mx-auto px-4 py-16 md:py-24 space-y-20">
+      <div class="container mx-auto px-2 sm:px-4 py-10 sm:py-16 md:py-24 space-y-14 sm:space-y-20">
         <!-- Introduction: Rôle essentiel -->
-        <section class="grid md:grid-cols-5 gap-12 items-center max-w-7xl mx-auto">
-          <div class="md:col-span-2">
-             <img src="../assets/apiculteur.jpg" alt="Apiculteur souriant tenant un cadre de ruche" class="rounded-xl shadow-xl w-full h-full object-cover transform transition-transform duration-500 hover:scale-105" loading="lazy">
+        <section class="grid grid-cols-1 md:grid-cols-5 gap-y-8 md:gap-12 items-center max-w-7xl mx-auto">
+          <div class="md:col-span-2 flex justify-center items-center">
+             <img src="../assets/apiculteur.jpg" alt="Apiculteur souriant tenant un cadre de ruche" class="rounded-xl shadow-xl w-full max-w-xs sm:max-w-sm md:max-w-full h-auto object-cover transform transition-transform duration-500 hover:scale-105" loading="lazy">
           </div>
-          <div class="md:col-span-3 prose prose-lg text-gray-700 leading-relaxed">
-            <h2 class="text-3xl font-bold text-yellow-800 mb-6">
+          <div class="md:col-span-3 prose prose-lg text-gray-700 leading-relaxed max-w-full">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-800 mb-6">
               Un Partenaire Essentiel de la Nature
             </h2>
             <p>
@@ -163,12 +163,12 @@
 
         <!-- Les Saisons de l'Apiculteur -->
         <section>
-          <h2 class="text-3xl font-bold text-yellow-800 text-center mb-12">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-800 text-center mb-8 sm:mb-12">
             Le Calendrier de l'Apiculteur
           </h2>
-          <div class="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
-            <div class="bg-white p-8 rounded-xl shadow-md border-l-4 border-green-500">
-              <h3 class="text-2xl font-semibold text-green-800 mb-3">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-8 lg:gap-12 max-w-6xl mx-auto">
+            <div class="bg-white p-6 sm:p-8 rounded-xl shadow-md border-l-4 border-green-500 flex flex-col h-full">
+              <h3 class="text-xl sm:text-2xl font-semibold text-green-800 mb-3">
                 Printemps : Le Réveil
               </h3>
               <p class="text-gray-600 mb-4">
@@ -182,8 +182,8 @@
               </ul>
             </div>
 
-            <div class="bg-white p-8 rounded-xl shadow-md border-l-4 border-yellow-500">
-              <h3 class="text-2xl font-semibold text-yellow-800 mb-3">
+            <div class="bg-white p-6 sm:p-8 rounded-xl shadow-md border-l-4 border-yellow-500 flex flex-col h-full">
+              <h3 class="text-xl sm:text-2xl font-semibold text-yellow-800 mb-3">
                 Été : La Récolte
               </h3>
               <p class="text-gray-600 mb-4">
@@ -197,8 +197,8 @@
               </ul>
             </div>
 
-            <div class="bg-white p-8 rounded-xl shadow-md border-l-4 border-orange-500">
-              <h3 class="text-2xl font-semibold text-orange-800 mb-3">
+            <div class="bg-white p-6 sm:p-8 rounded-xl shadow-md border-l-4 border-orange-500 flex flex-col h-full">
+              <h3 class="text-xl sm:text-2xl font-semibold text-orange-800 mb-3">
                 Automne : La Préparation
               </h3>
               <p class="text-gray-600 mb-4">
@@ -212,8 +212,8 @@
               </ul>
             </div>
 
-            <div class="bg-white p-8 rounded-xl shadow-md border-l-4 border-blue-500">
-              <h3 class="text-2xl font-semibold text-blue-800 mb-3">
+            <div class="bg-white p-6 sm:p-8 rounded-xl shadow-md border-l-4 border-blue-500 flex flex-col h-full">
+              <h3 class="text-xl sm:text-2xl font-semibold text-blue-800 mb-3">
                 Hiver : Le Repos
               </h3>
               <p class="text-gray-600 mb-4">
@@ -230,64 +230,17 @@
         </section>
 
         <!-- Qualités requises -->
-        <section>
-          <h2 class="text-3xl font-bold text-yellow-800 text-center mb-12">
-            Les 5 Qualités de l'Apiculteur
-          </h2>
-          <div
-            class="flex flex-row gap-6 pb-6 overflow-x-auto"
-          >
-            <div class="flex-shrink-0 w-64 bg-white rounded-xl shadow-lg p-6 text-center flex flex-col items-center justify-start transition-transform transform hover:-translate-y-2">
-              <div class="bg-yellow-100 rounded-full p-4 mb-4 inline-block">
-                  <svg class="w-10 h-10 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-              </div>
-              <h3 class="font-semibold text-lg text-gray-800">
-                Patience & Calme
-              </h3>
-            </div>
-            <div class="flex-shrink-0 w-64 bg-white rounded-xl shadow-lg p-6 text-center flex flex-col items-center justify-start transition-transform transform hover:-translate-y-2">
-              <div class="bg-yellow-100 rounded-full p-4 mb-4 inline-block">
-                <svg class="w-10 h-10 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-              </div>
-              <h3 class="font-semibold text-lg text-gray-800">
-                Sens de l'Observation
-              </h3>
-            </div>
-            <div class="flex-shrink-0 w-64 bg-white rounded-xl shadow-lg p-6 text-center flex flex-col items-center justify-start transition-transform transform hover:-translate-y-2">
-              <div class="bg-yellow-100 rounded-full p-4 mb-4 inline-block">
-                  <svg class="w-10 h-10 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
-              </div>
-              <h3 class="font-semibold text-lg text-gray-800">Rigueur</h3>
-            </div>
-            <div class="flex-shrink-0 w-64 bg-white rounded-xl shadow-lg p-6 text-center flex flex-col items-center justify-start transition-transform transform hover:-translate-y-2">
-              <div class="bg-yellow-100 rounded-full p-4 mb-4 inline-block">
-                <svg class="w-10 h-10 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 002-2v-1a2 2 0 012-2h1.945M12 11v9.25m0 0l-2.75-2.75M12 20.25l2.75-2.75" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-              </div>
-              <h3 class="font-semibold text-lg text-gray-800">
-                Force Physique
-              </h3>
-            </div>
-            <div class="flex-shrink-0 w-64 bg-white rounded-xl shadow-lg p-6 text-center flex flex-col items-center justify-start transition-transform transform hover:-translate-y-2">
-              <div class="bg-yellow-100 rounded-full p-4 mb-4 inline-block">
-                <svg class="w-10 h-10 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-              </div>
-              <h3 class="font-semibold text-lg text-gray-800">
-                Passion Naturelle
-              </h3>
-            </div>
-          </div>
-        </section>
       </div>
     </main>
     <footer class="bg-yellow-700 text-yellow-50 mt-auto">
       <div
-        class="container mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-4"
+        class="container mx-auto px-2 sm:px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-4 flex-wrap"
       >
-        <div>
-          <p class="font-bold text-lg">Apiculteur Passionné</p>
-          <p class="text-sm">© 2024 Jean Dupont - Tous droits réservés</p>
+        <div class="min-w-0">
+          <p class="font-bold text-base sm:text-lg">Apiculteur Passionné</p>
+          <p class="text-xs sm:text-sm">© 2024 Jean Dupont - Tous droits réservés</p>
         </div>
-        <ul class="flex gap-4 text-sm">
+        <ul class="flex flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm justify-center md:justify-end w-full md:w-auto">
           <li>
             <a href="mentions-legales.html" class="hover:underline"
               >Mentions légales</a
