@@ -89,8 +89,11 @@ const navLinks = document.querySelectorAll('.nav-link');
 navLinks.forEach(link => {
   if (link.href === window.location.href || link.href === window.location.origin + window.location.pathname) {
     link.classList.add('font-semibold', 'border-b-2', 'border-yellow-400', 'text-yellow-700');
+    // Ajout pour menu mobile
+    link.classList.add('active');
   } else {
     link.classList.remove('font-semibold', 'border-b-2', 'border-yellow-400', 'text-yellow-700');
+    link.classList.remove('active');
   }
 });
 // Menu burger mobile
